@@ -1,4 +1,4 @@
-from rdf import *
+from backend.rdf import *
 
 list_provinsi = [
     'Aceh',
@@ -80,25 +80,25 @@ def get_tabel_tipe_perawatan(provinsi):
 
 def get_tabel_pengelola(provinsi):
     data = query_pengelola(provinsi)
-    tabel = build_tabel('Pengelola', 'Jumlah RS', 'Jumlah Tempat Tidur' data)
+    tabel = build_tabel('Pengelola', 'Jumlah RS', 'Jumlah Tempat Tidur', data)
     return tabel
 
 
 def get_tabel_tipe_kelas(provinsi):
     data = query_tipe_kelas(provinsi)
-    tabel = build_tabel('Tipe Kelas', 'Jumlah RS', 'Jumlah Tempat Tidur' data)
+    tabel = build_tabel('Tipe Kelas', 'Jumlah RS', 'Jumlah Tempat Tidur', data)
     return tabel
 
 
 def get_rs_pengelola(pengelola, provinsi):
     data = query_rs_pengelola(pengelola, provinsi)
-    tabel = build_tabel('Nama RS' data)
+    tabel = build_tabel('Nama RS', data)
     return tabel
 
 
 def get_tabel_rs(provinsi):
     data = query_rs(provinsi)
-    tabel = build_tabel('Nama', 'Tipe', 'Kelas', 'Pengelola', 'Wilayah')
+    tabel = build_tabel('Nama', 'Tipe', 'Kelas', 'Pengelola', 'Wilayah', data)
     return tabel
 
 
@@ -107,19 +107,20 @@ def get_detail_rs(rumah_sakit):
     return data
 
 
-def get_tipe_rs(tipe_rs, provinsi):
+def get_tabel_tipe_rs(tipe_rs, provinsi):
     data = query_tipe_rs(tipe_rs, provinsi)
-    tabel = build_tabel('Nama RS' data)
+    tabel = build_tabel('Nama RS', data)
     return tabel
 
 
-def get_kelas_rs(kelas_rs, provinsi):
+def get_tabel_kelas_rs(kelas_rs, provinsi):
     data = query_kelas_rs(kelas_rs, provinsi)
-    tabel = build_tabel('Nama RS' data)
+    tabel = build_tabel('Nama RS',
+                        data)
     return tabel
 
 
-def get_rs_jumlah_kamar(wilayah):
+def get_tabel_rs_jumlah_kamar(wilayah):
     data = query_rs_wilayah(wilayah)
     tabel = build_tabel('Nama RS', data)
     jumlah_kamar = len(data)
