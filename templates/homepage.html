@@ -1,35 +1,80 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      	<!--Import Google Icon Font-->
-      	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      	<!--Import materialize.css-->
-		<link type="text/css" rel="stylesheet" href="../static/materialize.min.css"  media="screen,projection"/>
+	<head>
+		<!--Import Google Icon Font-->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!--Import materialize.css-->
+		<link type="text/css" rel="stylesheet" href="../static/css/materialize.min.css"  media="screen,projection"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 		<!--Let browser know website is optimized for mobile-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    </head>
-
-    <body>
-    	<!-- Dropdown Structure -->
-		<ul id='dropdown1' class='dropdown-content'>
-			<li><a href="#!">one</a></li>
-			<li><a href="#!">two</a></li>
-			<li class="divider" tabindex="-1"></li>
-			<li><a href="#!">three</a></li>
-			<li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-			<li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
-		</ul>
-		
-		<h4>Cari Rumah Sakit berdasarkan Provinsi</h4>
-		<!-- Dropdown Trigger -->
-  		<a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Pilih Provinsi</a>
-      	<!--JavaScript at end of body for optimized loading-->
-      	<script type="text/javascript" src="../static/materialize.min.js">
-			document.addEventListener('DOMContentLoaded', function() {
-		    var elems = document.querySelectorAll('.dropdown-trigger');
-		    var instances = M.Dropdown.init(elems, options);
-		  	});
+	</head>
+	<body>
+		<h3 class="center-align">Portal Informasi Rumah Sakit</h3>
+		<div class="row">
+			<form class="col s12">
+				<div class="row">
+					<div class="input-field col s12">
+						<input placeholder="Placeholder" id="first_name" type="text" class="validate">
+						<label for="first_name">First Name</label>
+					</div>
+					<div class="input-field col s12">
+						<!-- <select name="provinsi" method="GET" action="/">
+							<option value="" disabled selected>Pilih Provinsi</option>
+							{% for prov in provinsi %}
+							<option value= "{{prov}}">{{prov}}</option>"
+							{% endfor %}
+						</select> -->
+						<select>
+					      	<option value="" disabled selected>Choose your option</option>
+					      	<option value="1">Option 1</option>
+					      	<option value="2">Option 2</option>
+					      	<option value="3">Option 3</option>
+					    </select>
+						<label>Pilih Provinsi</label>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="row">
+			<div class="col s12 m5">
+				<div class="card-panel blue">
+					<span class="white-text">
+						<h5 class="center-align">Cari Rumah Sakit berdasarkan Provinsi</h5>
+						<!-- Dropdown Trigger -->
+						<a class="dropdown-trigger btn" href="#" data-target="dropdown" id="dropdownMenu">Pilih Provinsi</a>
+						<!-- Dropdown Structure -->
+						<ul id="dropdown" class="dropdown-content">
+							<li><a href="#!">one</a></li>
+							<li><a href="#!">two</a></li>
+							<li class="divider" tabindex="-1"></li>
+							<li><a href="#!">three</a></li>
+							<li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+							<li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+						</ul>
+					</span>
+				</div>
+			</div>
+		</div>
+		<!--JavaScript at end of body for optimized loading-->
+		<script type="text/javascript" src="../static/js/materialize.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('#dropdownMenu').dropdown();
+				$('select').formSelect();
+			}
+			// document.addEventListener('DOMContentLoaded', function() {
+			// 	var elems = document.querySelectorAll('.dropdown-trigger');
+			// 	var instances = M.Dropdown.init(elems, options);
+			// });
+			
+			// provinsi.forEach(function(item) {
+			// 	var li = document.createElement("li");
+			// 	var text = document.createTextNode(item);
+			// 	li.appendChild(text);
+			// 	document.getElementById("dropdown").appendChild(li);
+			// });
 		</script>
-    </body>
+	</body>
 </html>
