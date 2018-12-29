@@ -29,12 +29,7 @@
 			<div class="card-panel blue">
 				<span class="white-text">
 						<h5 class="center-align">Cari Rumah Sakit berdasarkan Provinsi</h5>
-			      <ul id = "dropdown" class = "dropdown-content">
-			         <li><a href = "#">A</a></li>
-			         <li><a href = "#">B</a></li>
-			         <li><a href = "#">C</a></li>
-			         <li><a href = "#">D</a></li>
-			      </ul>
+			      <ul id = "dropdown" class = "dropdown-content"></ul>
 
 			      <a class = "btn dropdown-button" href = "#" data-activates = "dropdown">Pilih Provinsi
 			         <i class = "mdi-navigation-arrow-drop-down right"></i></a>
@@ -46,5 +41,17 @@
 	<script type="text/javascript" src="../static/js/materialize.min.js"></script>
 	<script src ="../static/js/materialize.min.jquery.js">
 	</script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function(){
+			// Load Dropdown of provinces
+			var list_provinsi = {{provinsi | safe}}
+			var options = "";
+			for(provinsi of list_provinsi){
+			  options += "<li>"+ provinsi + "</li>";
+			}
+			window.print(options);
+			document.getElementById("dropdown").innerHTML = options;
+		});
+		</script>
 </body>
 </html>
