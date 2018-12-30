@@ -18,19 +18,21 @@
 				<div class="card-panel white">
 					<span class="pink-text">
 						<h5 class="center-align">Cari Rumah Sakit berdasarkan Provinsi</h5>
-						<div class="input-field col s12">
-							<select class="browser-default" id="dropdownMenu">
-						      	<option value="" disabled selected>Pilih Provinsi</option>
-						      	{% for prov in provinsi %}
-								<option value= "{{prov}}">{{prov}}</option>"
-								{% endfor %}
-						    </select>
-						</div>
-						<div class="row">
-							<button class="btn waves-effect pink darken-2" name="action" onclick="dataProvinsi()">Cari
-								<i class="material-icons right">search</i>
-							</button>
-						</div>
+						<form class="form-inline" method="POST" action="">
+							<div class="input-field col s12">
+								<select class="browser-default" id="dropdownMenu" name="dropdown">
+							      	<option value="" disabled selected>Pilih Provinsi</option>
+							      	{% for prov in provinsi %}
+									<option value= "{{prov}}">{{prov}}</option>"
+									{% endfor %}
+							    </select>
+							</div>
+							<div class="row">
+								<button class="btn waves-effect pink darken-2" name="action" onclick="dataProvinsi()">Cari
+									<i class="material-icons right">search</i>
+								</button>
+							</div>
+						</form>
 					</span>
 				</div>
 			</div>
@@ -202,7 +204,7 @@
 				</tbody>
 			</table>
 		</div>
-		
+
 		<!-- daftar semua rs di provinsi X (data-rs.html) -->
 		<h3 class="center-align">Daftar Rumah Sakit di Provinsi {{ provins }}</h3>
 		<div class="container">
@@ -325,7 +327,7 @@
 			<h6 class="center-align">Pengelola: </h6>
 			<h6 class="center-align">Melayani Pelayanan Keluarga Berencana Gratis</h6>
 		</div>
-		
+
 		<!-- detail-puskesmas.html -->
 		<div class="container">
 			<h4 class="center-align">Puskesmas {{ rumah_sakit }}</h4>
