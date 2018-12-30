@@ -14,76 +14,40 @@
 	<body>
 		<h3 class="center-align">Portal Informasi Rumah Sakit</h3>
 		<div class="row">
-			<form class="col s12" method="POST" action="{{ url_for('data_rs_provinsi_statisik_tenaga_medis', provinsi='aceh') }}">
-				<div class="row">
-					<div class="col s12 m5">
-						<div class="card-panel white">
-							<span class="black-text">
-								<h5 class="center-align">Cari Rumah Sakit berdasarkan Provinsi</h5>
-								<ul id = "dropdown" class = "dropdown-content"></ul>
-								<button id="dropdownButton" class = "btn dropdown-button pink darken-2" data-activates = "dropdown">Pilih Provinsi
-									<i class = "mdi-navigation-arrow-drop-down right"></i>
-								</button>
-							</span>
+			<div class="col s12 m5">
+				<div class="card-panel white">
+					<span class="pink-text">
+						<h5 class="center-align">Cari Rumah Sakit berdasarkan Provinsi</h5>
+						<div class="input-field col s12">
+							<select class="browser-default" id="dropdownMenu">
+						      	<option value="" disabled selected>Pilih Provinsi</option>
+						      	{% for prov in provinsi %}
+								<option value= "{{prov}}">{{prov}}</option>"
+								{% endfor %}
+						    </select>
 						</div>
-					</div>
+						<div class="row">
+							<button class="btn waves-effect pink darken-2" name="action" onclick="dataProvinsi()">Cari
+								<i class="material-icons right">search</i>
+							</button>
+						</div>
+					</span>
 				</div>
-				<div class="row">
-					<button class="btn waves-effect pink darken-2" name="action" onclick="dataProvinsi()">Cari
-						<i class="material-icons right">search</i>
-					</button>
-				</div>
-			</form>
+			</div>
 		</div>
 		<!--JavaScript at end of body for optimized loading-->
 		<script type="text/javascript" src="../static/js/materialize.min.js"></script>
 		<script src ="../static/js/materialize.min.jquery.js"></script>
-		<script>
-			document.addEventListener('DOMContentLoaded', function() {
-				// Load Dropdown of provinces
-				var list_provinsi = {{provinsi | safe}}
-				var options = "";
-				for(provinsi of list_provinsi){
-				  options += "<li>" + provinsi + "</li>";
-				}
-				document.getElementById("dropdown").innerHTML = options;
-			});
-			$("#dropdown").click(function() {
-				$("#dropdown :selected").text(); // The text content of the selected option
-				// $(this).parents(".btn-group").find('.selection').text($(this).text());
-				// $(this).parents(".btn-group").find('.selection').val($(this).text());
-			});
-			function pilihProvinsi() {
-				var x = document.getElementById("dropdown").innerText;
-				document.getElementById("dropdownButton").innerHTML = x;
-			}
+		<script type="text/javascript">
 			function dataProvinsi() {
-				var chosenProv = document.getElementsByTagName("ul")[0].children[1].innerText;
+				var e = document.getElementById("dropdownMenu");
+				var chosenProv = e.options[e.selectedIndex].value;
 				str = chosenProv.replace(/\s+/g, '-').toLowerCase();
-				console.log(str);
 				if(chosenProv != 'none') {
 					url = "/data-rs/" + str + "/statistik-tenaga-medis/"
 					window.location = url;
 				}
 			}
-			// function myFunction() {
-			// 	document.getElementById("dropdown").classList.toggle("show");
-			// }
-			// function filterFunction() {
-			// 	var input, filter, ul, li, a, i;
-			// 	input = document.getElementById("myInput");
-			// 	filter = input.value.toUpperCase();
-			// 	div = document.getElementById("myDropdown");
-			// 	a = div.getElementsByTagName("a");
-			// 	for (i = 0; i < a.length; i++) {
-			// 		txtValue = a[i].textContent || a[i].innerText;
-			// 		if (txtValue.toUpperCase().indexOf(filter) > -1) {
-			// 			a[i].style.display = "";
-			// 		} else {
-			// 			a[i].style.display = "none";
-			// 		}
-			// 	}
-			// }
 		</script>
 
 		<!-- untuk halaman data-rs-provinsi.html -->
