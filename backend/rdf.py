@@ -28,7 +28,7 @@ SELECT ?province WHERE {
     for item in data['results']['bindings']:
         provinsi_link.append(item['province']['value'])
 
-    file_name = 'data-rs-all.nt'
+    file_name = '../static/data/data-rs-all.nt'
     query = """
     SELECT ?hospital_name ?hospital WHERE {
     ?row <http://0.0.0.0:8080/dataRS#NAMA_RS> ?hospital.
@@ -83,7 +83,7 @@ SELECT ?province WHERE {
     for item in data['results']['bindings']:
         provinsi_link.append(item['province']['value'])
 
-    file_name = 'data-rs-all.nt'
+    file_name = '../static/data/data-rs-all.nt'
     query = """
     SELECT ?pengelola ?pengelola_label (count(?hospital) as ?count) WHERE {
     ?row <http://0.0.0.0:8080/dataRS#NAMA_RS> ?hospital.
@@ -115,7 +115,7 @@ SELECT ?province WHERE {
     for item in data['results']['bindings']:
         provinsi_link.append(item['province']['value'])
 
-    file_name = 'data-rs-all.nt'
+    file_name = '../static/data/data-rs-all.nt'
     query = """
     SELECT ?class ?class_label (count(?hospital) as ?count) WHERE {
     ?row <http://0.0.0.0:8080/dataRS#NAMA_RS> ?hospital.
@@ -136,11 +136,33 @@ SELECT ?province WHERE {
 
 
 def query_rs_pengelola(pengelola, provinsi):
-    file_name = None
+    provinsi_link = []
     query = """
+SELECT ?province WHERE {
+?province <http://www.wikidata.org/prop/direct/P31> <http://www.wikidata.org/entity/Q5098> .
+?province <http://www.w3.org/2000/01/rdf-schema#label> \"""" + provinsi + """\"@id.}
     """
+    r = requests.get(url, params = {'format': 'json', 'query': query})
+    data = r.json()
+    for item in data['results']['bindings']:
+        provinsi_link.append(item['province']['value'])
+
+    file_name = '../static/data/data-rs-all.nt'
+    query = """
+    SELECT ?hospital ?hospital_name WHERE {
+    ?row <http://0.0.0.0:8080/dataRS#NAMA_RS> ?hospital.
+    ?row <http://www.w3.org/2000/01/rdf-schema#label> ?hospital_name .
+    ?hospital <http://0.0.0.0:8080/dataRS#PENYELENGGARA> ?pengelola.
+    ?pengelola <http://www.w3.org/2000/01/rdf-schema#label> \"""" + pengelola + """\"@id-id .
+    ?hospital <http://0.0.0.0:8080/dataRS#KAB_KOTA> ?region.
+    ?region <http://www.wikidata.org/prop/direct/P131> <""" + provinsi_link[0] + """>.
+    }"""
+    
     result = get_query(file_name, query)
-    return result
+    d = {}
+    for row in result:
+        d[str(row.asdict()['hospital'].toPython())] = str(row.asdict()['hospital_name'].toPython())
+    return d
 
 
 def query_rs(provinsi):
@@ -160,30 +182,65 @@ def query_detail_rs(rumah_sakit):
 
 
 def query_tipe_rs(tipe_rs, provinsi):
-    file_name = None
+    provinsi_link = []
     query = """
+SELECT ?province WHERE {
+?province <http://www.wikidata.org/prop/direct/P31> <http://www.wikidata.org/entity/Q5098> .
+?province <http://www.w3.org/2000/01/rdf-schema#label> \"""" + provinsi + """\"@id.}
     """
+    r = requests.get(url, params = {'format': 'json', 'query': query})
+    data = r.json()
+    for item in data['results']['bindings']:
+        provinsi_link.append(item['province']['value'])
+
+    file_name = '../static/data/data-rs-all.nt'
+    query = """
+    SELECT ?hospital ?hospital_name WHERE {
+    ?row <http://0.0.0.0:8080/dataRS#NAMA_RS> ?hospital.
+    ?row <http://www.w3.org/2000/01/rdf-schema#label> ?hospital_name .
+    ?hospital <http://0.0.0.0:8080/dataRS#JENIS_RS> \"""" + tipe_rs + """\"@id-id .
+    ?hospital <http://0.0.0.0:8080/dataRS#KAB_KOTA> ?region.
+    ?region <http://www.wikidata.org/prop/direct/P131> <""" + provinsi_link[0] + """>.
+    }"""
+    
     result = get_query(file_name, query)
-    return result
+    d = {}
+    for row in result:
+        d[str(row.asdict()['hospital'].toPython())] = str(row.asdict()['hospital_name'].toPython())
+    return d
 
 
 def query_kelas_rs(kelas_rs, provinsi):
-    file_name = None
+    provinsi_link = []
     query = """
+SELECT ?province WHERE {
+?province <http://www.wikidata.org/prop/direct/P31> <http://www.wikidata.org/entity/Q5098> .
+?province <http://www.w3.org/2000/01/rdf-schema#label> \"""" + provinsi + """\"@id.}
     """
-    result = get_query(file_name, query)
-    return result
+    r = requests.get(url, params = {'format': 'json', 'query': query})
+    data = r.json()
+    for item in data['results']['bindings']:
+        provinsi_link.append(item['province']['value'])
 
-
-def query_rs_wilayah(wilayah):
-    file_name = None
+    file_name = '../static/data/data-rs-all.nt'
     query = """
-    """
+    SELECT ?hospital ?hospital_name WHERE {
+    ?row <http://0.0.0.0:8080/dataRS#NAMA_RS> ?hospital.
+    ?row <http://www.w3.org/2000/01/rdf-schema#label> ?hospital_name .
+    ?hospital <http://0.0.0.0:8080/dataRS#KLS_RS> ?class.
+    ?class <http://www.w3.org/2000/01/rdf-schema#label> \"""" + kelas_rs + """\"@id-id .
+    ?hospital <http://0.0.0.0:8080/dataRS#KAB_KOTA> ?region.
+    ?region <http://www.wikidata.org/prop/direct/P131> <""" + provinsi_link[0] + """>.
+    }"""
+    
     result = get_query(file_name, query)
-    return result
+    d = {}
+    for row in result:
+        d[str(row.asdict()['hospital'].toPython())] = str(row.asdict()['hospital_name'].toPython())
+    return d
 
 
 if __name__ == '__main__':
-    res = query_tipe_kelas("Daerah Khusus Ibukota Jakarta")
+    res = query_kelas_rs("A", "Daerah Khusus Ibukota Jakarta")
     # if you want to see the result
     test(res)
