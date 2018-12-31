@@ -1,41 +1,41 @@
 from backend.rdf import *
 
-list_provinsi = [
-    'Aceh',
-    'Sumatera Utara',
-    'Sumatera Barat',
-    'Riau',
-    'Jambi',
-    'Sumatera Selatan',
-    'Bengkulu',
-    'Lampung',
-    'Kepulauan Bangka Belitung',
-    'Kepulauan Riau',
-    'DKI Jakarta',
-    'Jawa Barat',
-    'Jawa Tengah',
-    'DI Yogyakarta',
-    'Jawa Timur',
-    'Banten',
-    'Bali',
-    'Nusa Tenggara Barat',
-    'Nusa Tenggara Timur',
-    'Kalimantan Barat',
-    'Kalimantan Tengah',
-    'Kalimantan Selatan',
-    'Kalimantan Timur',
-    'Kalimantan Utara',
-    'Sulawesi Utara',
-    'Sulawesi Tengah',
-    'Sulawesi Selatan',
-    'Sulawesi Tenggara',
-    'Gorontalo',
-    'Sulawesi Barat',
-    'Maluku',
-    'Maluku Utara',
-    'Papua Barat',
-    'Papua'
-]
+# list_provinsi = [
+#     'Aceh',
+#     'Sumatera Utara',
+#     'Sumatera Barat',
+#     'Riau',
+#     'Jambi',
+#     'Sumatera Selatan',
+#     'Bengkulu',
+#     'Lampung',
+#     'Kepulauan Bangka Belitung',
+#     'Kepulauan Riau',
+#     'Daerah Khusus Ibukota Jakarta',
+#     'Jawa Barat',
+#     'Jawa Tengah',
+#     'DI Yogyakarta',
+#     'Jawa Timur',
+#     'Banten',
+#     'Bali',
+#     'Nusa Tenggara Barat',
+#     'Nusa Tenggara Timur',
+#     'Kalimantan Barat',
+#     'Kalimantan Tengah',
+#     'Kalimantan Selatan',
+#     'Kalimantan Timur',
+#     'Kalimantan Utara',
+#     'Sulawesi Utara',
+#     'Sulawesi Tengah',
+#     'Sulawesi Selatan',
+#     'Sulawesi Tenggara',
+#     'Gorontalo',
+#     'Sulawesi Barat',
+#     'Maluku',
+#     'Maluku Utara',
+#     'Papua Barat',
+#     'Papua'
+# ]
 
 
 def build_tabel(*kolom):
@@ -57,25 +57,32 @@ def build_tabel(*kolom):
 
 
 def get_seluruh_provinsi():
+    result = query_list_all_provinsi()
+    sorted_result = {}
+    list_provinsi = []
+    for key, value in sorted(result.items(), key=lambda item: (item[1], item[0])):
+        sorted_result[key] = value
+        list_provinsi.append(value)
     return list_provinsi
 
 
 def get_seluruh_rs(provinsi):
     list_rs = query_list_all_rs(provinsi)
+    print(list_rs)
     return list_rs
 
-
-def get_tabel_statistik_tenaga_medis(provinsi):
-    data = query_statistik_tenaga_medis(provinsi)
-    tabel = build_tabel('Jumlah Rumah Sakit', 'Jumlah Dokter Spesialis',
-                        'Jumlah Dokter Gigi', 'Jumlah Dokter Umum', 'Jumlah Perawat', 'Jumlah Bidan', data)
-    return tabel
-
-
-def get_tabel_tipe_perawatan(provinsi):
-    data = query_tipe_perawatan(provinsi)
-    tabel = build_tabel('Tipe Perawatan', 'Jumlah Kamar', data)
-    return tabel
+#
+# def get_tabel_statistik_tenaga_medis(provinsi):
+#     data = query_statistik_tenaga_medis(provinsi)
+#     tabel = build_tabel('Jumlah Rumah Sakit', 'Jumlah Dokter Spesialis',
+#                         'Jumlah Dokter Gigi', 'Jumlah Dokter Umum', 'Jumlah Perawat', 'Jumlah Bidan', data)
+#     return tabel
+#
+#
+# def get_tabel_tipe_perawatan(provinsi):
+#     data = query_tipe_perawatan(provinsi)
+#     tabel = build_tabel('Tipe Perawatan', 'Jumlah Kamar', data)
+#     return tabel
 
 
 def get_tabel_pengelola(provinsi):

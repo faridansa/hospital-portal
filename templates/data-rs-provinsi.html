@@ -1,38 +1,148 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      	<!--Import Google Icon Font-->
-      	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      	<!--Import materialize.css-->
-		<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+	<head>
+		<!--Import Google Icon Font-->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!--Import materialize.css-->
+		<link type="text/css" rel="stylesheet" href="../static/css/materialize.min.css" media="screen,projection" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 		<!--Let browser know website is optimized for mobile-->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    </head>
-	<body>
-		<h1>Data RS di Provinsi {{provinsi}}</h1>
-    	<!-- Dropdown Structure -->
-		<ul id='dropdown1' class='dropdown-content'>
-			<li><a href="#!">one</a></li>
-			<li><a href="#!">two</a></li>
-			<li class="divider" tabindex="-1"></li>
-			<li><a href="#!">three</a></li>
-			<li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-			<li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
-		</ul>
-		<a class="waves-effect waves-light btn">button</a>
-		<a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>button</a>
-		<a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>button</a>
-		<h1>Cari Provinsi RS </h1>
-		<!-- Dropdown Trigger -->
-  		<a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Drop Me!</a>
-      	<!--JavaScript at end of body for optimized loading-->
-      	<script type="text/javascript" src="js/materialize.min.js">
-			document.addEventListener('DOMContentLoaded', function() {
-		    var elems = document.querySelectorAll('.dropdown-trigger');
-		    var instances = M.Dropdown.init(elems, options);
-		  	});
-		</script>
-    </body>
-</html>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	</head>
 
+	<body>
+    <h3 class="center-align">Daftar RS di Provinsi {{ provinsi }}</h3>
+		<!-- untuk halaman data-rs-provinsi.html -->
+		<div class="row">
+			<div class="col s12">
+				<ul class="tabs">
+					<li class="tab col s3"><a class="active" href="#test1">Statistik Tenaga Medis</a></li>
+					<li class="tab col s3"><a href="#test2">Tipe Perawatan</a></li>
+					<li class="tab col s3"><a href="#test3">Pengelola</a></li>
+					<li class="tab col s3"><a href="#test4">Tipe Kelas</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- statistik tenaga medis -->
+		<div class="container">
+			<table class="highlight">
+				<thead>
+					<tr>
+						<th>Jumlah Rumah Sakit</th>
+						<th>Jumlah Dokter Spesialis</th>
+						<th>Jumlah Dokter Gigi</th>
+						<th>Jumlah Dokter Umum</th>
+						<th>Jumlah Perawat</th>
+						<th>Jumlah Bidan</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Alvin</td>
+						<td>Eclair</td>
+						<td>$0.87</td>
+					</tr>
+					<tr>
+						<td>Alan</td>
+						<td>Jellybean</td>
+						<td>$3.76</td>
+					</tr>
+					<tr>
+						<td>Jonathan</td>
+						<td>Lollipop</td>
+						<td>$7.00</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- tipe perawatan -->
+		<div class="container">
+			<table class="highlight">
+				<thead>
+					<tr>
+						<th>Tipe Perawatan</th>
+						<th>Jumlah Kamar</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Alvin</td>
+						<td>Eclair</td>
+					</tr>
+					<tr>
+						<td>Alan</td>
+						<td>Jellybean</td>
+					</tr>
+					<tr>
+						<td>Jonathan</td>
+						<td>Lollipop</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- tipe pengelola -->
+		<div class="container">
+			<table class="highlight">
+				<thead>
+					<tr>
+						<th>Pengelola</th>
+						<th>Jumlah Rumah Sakit</th>
+						<th>Jumlah Tempat Tidur</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Alvin</td>
+						<td>Eclair</td>
+						<td>$0.87</td>
+					</tr>
+					<tr>
+						<td>Alan</td>
+						<td>Jellybean</td>
+						<td>$3.76</td>
+					</tr>
+					<tr>
+						<td>Jonathan</td>
+						<td>Lollipop</td>
+						<td>$7.00</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- tipe kelas -->
+		<div class="container">
+			<table class="highlight">
+				<thead>
+					<tr>
+						<th>Tipe Kelas</th>
+						<th>Jumlah Rumah Sakit</th>
+						<th>Jumlah Tempat Tidur</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Alvin</td>
+						<td>Eclair</td>
+						<td>$0.87</td>
+					</tr>
+					<tr>
+						<td>Alan</td>
+						<td>Jellybean</td>
+						<td>$3.76</td>
+					</tr>
+					<tr>
+						<td>Jonathan</td>
+						<td>Lollipop</td>
+						<td>$7.00</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="row">
+      <form class="form-inline" action="data-rs/{{provinsi}}">
+  			<button class="waves-effect pink darken-2 btn">Lihat Daftar Rumah Sakit</button>
+      </form>
+		</div>
+	</body>
+</html>
