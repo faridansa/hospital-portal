@@ -2901,3 +2901,27 @@
 <http://0.0.0.0:8080/dataRS#row=198> <http://www.w3.org/2000/01/rdf-schema#label> "RS Ibu dan Anak Harapan Bunda"@id-id .
 <http://0.0.0.0:8080/dataRS#row=199> <http://www.w3.org/2000/01/rdf-schema#label> "RS Umum Daerah Kota Bengkulu"@id-id .
 <http://0.0.0.0:8080/dataRS#row=200> <http://www.w3.org/2000/01/rdf-schema#label> "RS Khusus Gigi dan Mulut Palembang Provinsi Sumatera Selatan"@id-id .
+
+<http://0.0.0.0:8080/dataRS#Kemkes> <http://www.w3.org/2000/01/rdf-schema#label> "Kemkes"@id-id .
+<http://0.0.0.0:8080/dataRS#TNI_AD> <http://www.w3.org/2000/01/rdf-schema#label> "TNI AD"@id-id .
+<http://0.0.0.0:8080/dataRS#Swasta_Lainnya> <http://www.w3.org/2000/01/rdf-schema#label> "Swasta/Lainnya"@id-id .
+<http://0.0.0.0:8080/dataRS#Perusahaan> <http://www.w3.org/2000/01/rdf-schema#label> "Perusahaan"@id-id .
+<http://0.0.0.0:8080/dataRS#Pemkab> <http://www.w3.org/2000/01/rdf-schema#label> "Pemkab"@id-id .
+<http://0.0.0.0:8080/dataRS#Organisasi_Sosial> <http://www.w3.org/2000/01/rdf-schema#label> "Organisasi Sosial"@id-id .
+<http://0.0.0.0:8080/dataRS#Organisasi_Islam> <http://www.w3.org/2000/01/rdf-schema#label> "Organisasi Islam"@id-id .
+<http://0.0.0.0:8080/dataRS#Perorangan> <http://www.w3.org/2000/01/rdf-schema#label> "Perorangan"@id-id .
+<http://0.0.0.0:8080/dataRS#TNI_AU> <http://www.w3.org/2000/01/rdf-schema#label> "TNI AU"@id-id .
+<http://0.0.0.0:8080/dataRS#Pemprop> <http://www.w3.org/2000/01/rdf-schema#label> "Pemprop"@id-id .
+<http://0.0.0.0:8080/dataRS#Pemkot> <http://www.w3.org/2000/01/rdf-schema#label> "Pemkot"@id-id .
+<http://0.0.0.0:8080/dataRS#Organisasi_Hindu> <http://www.w3.org/2000/01/rdf-schema#label> "Organisasi Hindu"@id-id .
+<http://0.0.0.0:8080/dataRS#Organisasi_Protestan> <http://www.w3.org/2000/01/rdf-schema#label> "Organisasi Protestan"@id-id .
+<http://0.0.0.0:8080/dataRS#POLRI> <http://www.w3.org/2000/01/rdf-schema#label> "POLRI"@id-id .
+<http://0.0.0.0:8080/dataRS#TNI_AL> <http://www.w3.org/2000/01/rdf-schema#label> "TNI AL"@id-id .
+<http://0.0.0.0:8080/dataRS#BUMN> <http://www.w3.org/2000/01/rdf-schema#label> "BUMN"@id-id .
+<http://0.0.0.0:8080/dataRS#Kementerian_Lain> <http://www.w3.org/2000/01/rdf-schema#label> "Kementerian Lain"@id-id .
+<http://0.0.0.0:8080/dataRS#Organisasi_Katholik> <http://www.w3.org/2000/01/rdf-schema#label> "Organisasi Katholik"@id-id .
+
+<http://0.0.0.0:8080/dataRS#A> <http://www.w3.org/2000/01/rdf-schema#label> "A"@id-id .
+<http://0.0.0.0:8080/dataRS#B> <http://www.w3.org/2000/01/rdf-schema#label> "B"@id-id .
+<http://0.0.0.0:8080/dataRS#C> <http://www.w3.org/2000/01/rdf-schema#label> "C"@id-id .
+<http://0.0.0.0:8080/dataRS#D> <http://www.w3.org/2000/01/rdf-schema#label> "D"@id-id .
