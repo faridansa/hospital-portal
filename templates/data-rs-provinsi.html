@@ -5,144 +5,137 @@
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<!--Import materialize.css-->
 		<link type="text/css" rel="stylesheet" href="../static/css/materialize.min.css" media="screen,projection" />
+		<link rel="stylesheet" type="text/css" href="../static/css/app-css.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
 		<!--Let browser know website is optimized for mobile-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<style type="text/css">
+			table.highlight > tbody > tr:hover {
+  				background-color: rgba(244, 143, 177, 0.5);
+			}
+		</style>
 	</head>
 
 	<body>
-    <h3 class="center-align">Daftar RS di Provinsi {{ provinsi }}</h3>
-		<!-- untuk halaman data-rs-provinsi.html -->
+		<h3 class="center-align">Daftar RS di Provinsi {{ provinsi }}</h3>
 		<div class="row">
 			<div class="col s12">
-				<ul class="tabs">
-					<li class="tab col s3"><a class="active" href="#test1">Statistik Tenaga Medis</a></li>
-					<li class="tab col s3"><a href="#test2">Tipe Perawatan</a></li>
-					<li class="tab col s3"><a href="#test3">Pengelola</a></li>
-					<li class="tab col s3"><a href="#test4">Tipe Kelas</a></li>
+				<ul class="tabs" id="tabs-swipe">
+					<li class="tab col s6"><a class="active" href="#" onclick="loadPengelola()";return false;>Pengelola</a></li>
+					<li class="tab col s6"><a href="#" onclick="loadTipeKelas()";return false;>Tipe Kelas</a></li>
 				</ul>
 			</div>
+			<div id="content">
+				{{ tabel_pengelola }}
+				<div class="container">
+					<table class="highlight">
+						<thead>
+							<tr>
+								<th>Pengelola</th>
+								<th>Jumlah Rumah Sakit</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Alvin</td>
+								<td>Eclair</td>
+							</tr>
+							<tr>
+								<td>Alan</td>
+								<td>Jellybean</td>
+							</tr>
+							<tr>
+								<td>Jonathan</td>
+								<td>Lollipop</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- <div id="swipe-1-content" class="col s12 blue">
+				Test 1
+				tab tipe pengelola
+				<div class="container">
+					<table class="highlight">
+						<thead>
+							<tr>
+								<th>Pengelola</th>
+								<th>Jumlah Rumah Sakit</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Alvin</td>
+								<td>Eclair</td>
+							</tr>
+							<tr>
+								<td>Alan</td>
+								<td>Jellybean</td>
+							</tr>
+							<tr>
+								<td>Jonathan</td>
+								<td>Lollipop</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div id="swipe-2-content" class="col s12 red">
+				Test 2
+				tab tipe kelas
+				<div class="container">
+					<table class="highlight">
+						<thead>
+							<tr>
+								<th>Tipe Kelas</th>
+								<th>Jumlah Rumah Sakit</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Alvin</td>
+								<td>Eclair</td>
+							</tr>
+							<tr>
+								<td>Alan</td>
+								<td>Jellybean</td>
+							</tr>
+							<tr>
+								<td>Jonathan</td>
+								<td>Lollipop</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div> -->
 		</div>
-		<!-- statistik tenaga medis -->
-		<div class="container">
-			<table class="highlight">
-				<thead>
-					<tr>
-						<th>Jumlah Rumah Sakit</th>
-						<th>Jumlah Dokter Spesialis</th>
-						<th>Jumlah Dokter Gigi</th>
-						<th>Jumlah Dokter Umum</th>
-						<th>Jumlah Perawat</th>
-						<th>Jumlah Bidan</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Alvin</td>
-						<td>Eclair</td>
-						<td>$0.87</td>
-					</tr>
-					<tr>
-						<td>Alan</td>
-						<td>Jellybean</td>
-						<td>$3.76</td>
-					</tr>
-					<tr>
-						<td>Jonathan</td>
-						<td>Lollipop</td>
-						<td>$7.00</td>
-					</tr>
-				</tbody>
-			</table>
+		
+		
+		<div class="row"></div>
+		<div class="row"></div>
+		<div class="center-align">
+			<form class="form-inline" action="data-rs/{{provinsi}}">
+				<button class="waves-effect pink darken-2 btn">Lihat Daftar Rumah Sakit</button>
+			</form>
 		</div>
-		<!-- tipe perawatan -->
-		<div class="container">
-			<table class="highlight">
-				<thead>
-					<tr>
-						<th>Tipe Perawatan</th>
-						<th>Jumlah Kamar</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Alvin</td>
-						<td>Eclair</td>
-					</tr>
-					<tr>
-						<td>Alan</td>
-						<td>Jellybean</td>
-					</tr>
-					<tr>
-						<td>Jonathan</td>
-						<td>Lollipop</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-		<!-- tipe pengelola -->
-		<div class="container">
-			<table class="highlight">
-				<thead>
-					<tr>
-						<th>Pengelola</th>
-						<th>Jumlah Rumah Sakit</th>
-						<th>Jumlah Tempat Tidur</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Alvin</td>
-						<td>Eclair</td>
-						<td>$0.87</td>
-					</tr>
-					<tr>
-						<td>Alan</td>
-						<td>Jellybean</td>
-						<td>$3.76</td>
-					</tr>
-					<tr>
-						<td>Jonathan</td>
-						<td>Lollipop</td>
-						<td>$7.00</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-		<!-- tipe kelas -->
-		<div class="container">
-			<table class="highlight">
-				<thead>
-					<tr>
-						<th>Tipe Kelas</th>
-						<th>Jumlah Rumah Sakit</th>
-						<th>Jumlah Tempat Tidur</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Alvin</td>
-						<td>Eclair</td>
-						<td>$0.87</td>
-					</tr>
-					<tr>
-						<td>Alan</td>
-						<td>Jellybean</td>
-						<td>$3.76</td>
-					</tr>
-					<tr>
-						<td>Jonathan</td>
-						<td>Lollipop</td>
-						<td>$7.00</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-		<div class="row">
-      <form class="form-inline" action="data-rs/{{provinsi}}">
-  			<button class="waves-effect pink darken-2 btn">Lihat Daftar Rumah Sakit</button>
-      </form>
-		</div>
+		<script type="text/javascript" src="../static/js/materialize.min.js"></script>
+		<script src ="../static/js/materialize.min.jquery.js"></script>
+		<script type="text/javascript">
+			// $(document).ready(function(){
+			// 	$("#tabs-swipe").tabs({ 
+			// 		swipeable: true, 
+			// 		responsiveThreshold : Infinity
+			// 	});
+			// });
+			function loadPengelola() {
+				var tabel_pengelola = {{ tabel_pengelola }}
+				document.getElementById("content").innerHTML = tabel_pengelola;
+			}
+			
+			function loadTipeKelas() {
+				var tabel_tipe_kelas = {{ tabel_tipe_kelas }}
+				document.getElementById("content").innerHTML = tabel_tipe_kelas;
+			}
+		</script>
 	</body>
 </html>

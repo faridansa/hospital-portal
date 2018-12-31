@@ -6,36 +6,45 @@
 		<!--Import materialize.css-->
 		<link type="text/css" rel="stylesheet" href="../static/css/materialize.min.css" media="screen,projection" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
 		<!--Let browser know website is optimized for mobile-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	</head>
 
 	<body>
 		<h3 class="center-align">Portal Informasi Rumah Sakit</h3>
+		<div class="row"></div>
+		<div class="row"></div>
 		<div class="row">
-			<div class="col s12 m5">
+			<div class="col m3"></div>
+			<div class="col s12 m6">
 				<div class="card-panel white">
 					<span class="pink-text">
 						<h5 class="center-align">Cari Rumah Sakit berdasarkan Provinsi</h5>
 						<form class="form-inline" method="POST" action="">
-							<div class="input-field col s12">
-								<select class="browser-default" id="dropdownMenu" name="dropdown">
-							      	<option value="" disabled selected>Pilih Provinsi</option>
-							      	{% for prov in provinsi %}
-									<option value= "{{prov}}">{{prov}}</option>"
-									{% endfor %}
-							    </select>
+							<div class="row">
+								<div class="col m3"></div>
+								<div class="input-field col s12 m6">
+									<select class="browser-default" id="dropdownMenu" name="dropdown">
+								      	<option value="" disabled selected>Pilih Provinsi</option>
+								      	{% for prov in provinsi %}
+										<option value= "{{prov}}">{{prov}}</option>"
+										{% endfor %}
+								    </select>
+								</div>
+								<div class="col m3"></div>
 							</div>
 							<div class="row">
-								<button class="btn waves-effect pink darken-2" name="action">Cari
-									<i class="material-icons right">search</i>
-								</button>
+								<div class="center-align">
+									<button class="btn waves-effect pink darken-2" name="action">Cari
+										<i class="material-icons right">search</i>
+									</button>
+								</div>
 							</div>
 						</form>
 					</span>
 				</div>
 			</div>
+			<div class="col m3"></div>
 		</div>
 		<!--JavaScript at end of body for optimized loading-->
 		<script type="text/javascript" src="../static/js/materialize.min.js"></script>
@@ -51,288 +60,5 @@
 				}
 			}
 		</script>
-
-		<!-- untuk halaman data-rs-provinsi.html -->
-		<div class="row">
-			<div class="col s12">
-				<ul class="tabs">
-					<li class="tab col s3"><a class="active" href="#test1">Statistik Tenaga Medis</a></li>
-					<li class="tab col s3"><a href="#test2">Tipe Perawatan</a></li>
-					<li class="tab col s3"><a href="#test3">Pengelola</a></li>
-					<li class="tab col s3"><a href="#test4">Tipe Kelas</a></li>
-				</ul>
-			</div>
-		</div>
-		<!-- statistik tenaga medis -->
-		<div class="container">
-			<table class="highlight">
-				<thead>
-					<tr>
-						<th>Jumlah Rumah Sakit</th>
-						<th>Jumlah Dokter Spesialis</th>
-						<th>Jumlah Dokter Gigi</th>
-						<th>Jumlah Dokter Umum</th>
-						<th>Jumlah Perawat</th>
-						<th>Jumlah Bidan</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Alvin</td>
-						<td>Eclair</td>
-						<td>$0.87</td>
-					</tr>
-					<tr>
-						<td>Alan</td>
-						<td>Jellybean</td>
-						<td>$3.76</td>
-					</tr>
-					<tr>
-						<td>Jonathan</td>
-						<td>Lollipop</td>
-						<td>$7.00</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-		<!-- tipe perawatan -->
-		<div class="container">
-			<table class="highlight">
-				<thead>
-					<tr>
-						<th>Tipe Perawatan</th>
-						<th>Jumlah Kamar</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Alvin</td>
-						<td>Eclair</td>
-					</tr>
-					<tr>
-						<td>Alan</td>
-						<td>Jellybean</td>
-					</tr>
-					<tr>
-						<td>Jonathan</td>
-						<td>Lollipop</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-		<!-- tipe pengelola -->
-		<div class="container">
-			<table class="highlight">
-				<thead>
-					<tr>
-						<th>Pengelola</th>
-						<th>Jumlah Rumah Sakit</th>
-						<th>Jumlah Tempat Tidur</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Alvin</td>
-						<td>Eclair</td>
-						<td>$0.87</td>
-					</tr>
-					<tr>
-						<td>Alan</td>
-						<td>Jellybean</td>
-						<td>$3.76</td>
-					</tr>
-					<tr>
-						<td>Jonathan</td>
-						<td>Lollipop</td>
-						<td>$7.00</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-		<!-- tipe kelas -->
-		<div class="container">
-			<table class="highlight">
-				<thead>
-					<tr>
-						<th>Tipe Kelas</th>
-						<th>Jumlah Rumah Sakit</th>
-						<th>Jumlah Tempat Tidur</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Alvin</td>
-						<td>Eclair</td>
-						<td>$0.87</td>
-					</tr>
-					<tr>
-						<td>Alan</td>
-						<td>Jellybean</td>
-						<td>$3.76</td>
-					</tr>
-					<tr>
-						<td>Jonathan</td>
-						<td>Lollipop</td>
-						<td>$7.00</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-		<div class="row">
-			<a class="waves-effect pink darken-2 btn">Lihat Daftar Rumah Sakit</a>
-		</div>
-
-		<!-- daftar rs POLRI atau SWASTA di provinsi X (data-rs-pengelola.html) -->
-		<h3 class="center-align">Daftar RS {{ pengelola }} di Provinsi {{ provins }}</h3>
-		<div class="container">
-			<table class="highlight">
-				<thead>
-					<tr>
-						<th>Nama Rumah Sakit</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Alvin</td>
-					</tr>
-					<tr>
-						<td>Alan</td>
-					</tr>
-					<tr>
-						<td>Jonathan</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-
-		<!-- daftar semua rs di provinsi X (data-rs.html) -->
-		<h3 class="center-align">Daftar Rumah Sakit di Provinsi {{ provins }}</h3>
-		<div class="container">
-			<table class="highlight">
-				<thead>
-					<tr>
-						<th>Nama Rumah Sakit</th>
-						<th>Tipe</th>
-						<th>Kelas</th>
-						<th>Pengelola</th>
-						<th>Wilayah</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Alvin</td>
-						<td>Eclair</td>
-						<td>$0.87</td>
-					</tr>
-					<tr>
-						<td>Alan</td>
-						<td>Jellybean</td>
-						<td>$3.76</td>
-					</tr>
-					<tr>
-						<td>Jonathan</td>
-						<td>Lollipop</td>
-						<td>$7.00</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-
-		<!-- daftar rs kelas ... di provinsi X (kelas-rs.html) -->
-		<h3 class="center-align">Daftar RS Kelas {{ kelas_rs }} di Provinsi {{ provins }}</h3>
-		<div class="container">
-			<table class="highlight">
-				<thead>
-					<tr>
-						<th>Nama Rumah Sakit</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Alvin</td>
-					</tr>
-					<tr>
-						<td>Alan</td>
-					</tr>
-					<tr>
-						<td>Jonathan</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-
-		<!-- daftar rs tipe ... contoh: RSJ di provinsi X (tipe-rs.html) -->
-		<h3 class="center-align">Daftar {{ tipe_rs }} di Provinsi {{ provins }}</h3>
-		<div class="container">
-			<table class="highlight">
-				<thead>
-					<tr>
-						<th>Nama Rumah Sakit</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Alvin</td>
-					</tr>
-					<tr>
-						<td>Alan</td>
-					</tr>
-					<tr>
-						<td>Jonathan</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-
-		<!-- Jumlah Kamar RS di wilayah X Barat (jumlah-kamar.html) -->
-		<h3 class="center-align">Jumlah Kamar Rumah Sakit di Wilayah {{ wilayah }}</h3>
-		<h4 class="center-align">{{ jumlah_kamar }} Kamar</h4>
-		<div class="container">
-			<table class="highlight">
-				<thead>
-					<tr>
-						<th>Daftar Rumah Sakit</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Alvin</td>
-					</tr>
-					<tr>
-						<td>Alan</td>
-					</tr>
-					<tr>
-						<td>Jonathan</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-
-		<!-- detail-rs.html -->
-		<div class="container">
-			<h4 class="center-align">Rumah Sakit {{ rumah_sakit }}</h4>
-			<h6 class="center-align">Tipe: </h6>
-			<h6 class="center-align">Kode: </h6>
-			<h6 class="center-align">Alamat: </h6>
-			<h6 class="center-align">Kota: </h6>
-			<h6 class="center-align">Kelurahan: </h6>
-			<h6 class="center-align">Kecamatan: </h6>
-			<h6 class="center-align">Kode Pos: </h6>
-			<h6 class="center-align">Nomor Telepon: </h6>
-			<h6 class="center-align">Nomor Fax: </h6>
-			<h6 class="center-align">Telepon Humas: </h6>
-			<h6 class="center-align">Email: </h6>
-			<h6 class="center-align">Website: </h6>
-			<h6 class="center-align">Kelas: </h6>
-			<h6 class="center-align">Pengelola: </h6>
-			<h6 class="center-align">Melayani Pelayanan Keluarga Berencana Gratis</h6>
-		</div>
-
-		<!-- detail-puskesmas.html -->
-		<div class="container">
-			<h4 class="center-align">Puskesmas {{ rumah_sakit }}</h4>
-			<h6 class="center-align">Tipe: </h6>
-			<h6 class="center-align">Alamat: </h6>
-		</div>
 	</body>
 </html>
