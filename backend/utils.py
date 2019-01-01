@@ -101,32 +101,34 @@ def get_seluruh_rs(provinsi):
 
 def get_tabel_pengelola(provinsi):
     result = query_pengelola(provinsi)
-    # result = [{
-    #     "label": "Organisasi Sosial",
-    #     "hospital_count": "2",
-    #     "uri": "http://0.0.0.0:8080/dataRS#Organisasi_Sosial"
-    # }, {
-    #     "label": "Swasta/Lainnya",
-    #     "hospital_count": "4",
-    #     "uri": "http://0.0.0.0:8080/dataRS#Swasta_Lainnya"
-    # },
-    #     {
-    #     "label": "Kemkes",
-    #         "hospital_count": "1",
-    #         "uri": "http://0.0.0.0:8080/dataRS#Kemkes"
-    # },
-    #     {
-    #     "label": "POLRI",
-    #         "hospital_count": "1",
-    #         "uri": "http://0.0.0.0:8080/dataRS#POLRI"
-    # }]
+    print(result)
+#     result = [{
+#     "label": "Organisasi Sosial",
+#     "hospital_count": "2",
+#     "uri": "http://0.0.0.0:8080/dataRS#Organisasi_Sosial"
+# }, {
+#     "label": "Swasta/Lainnya",
+#     "hospital_count": "4",
+#     "uri": "http://0.0.0.0:8080/dataRS#Swasta_Lainnya"
+# },
+#     {
+#         "label": "Kemkes",
+#     "hospital_count": "1",
+#     "uri": "http://0.0.0.0:8080/dataRS#Kemkes"
+# },
+#     {
+#         "label": "POLRI",
+#     "hospital_count": "1",
+#     "uri": "http://0.0.0.0:8080/dataRS#POLRI"
+# }]
+
     list_pengelola = []
     list_jumlah = []
     list_uri = []
     for i in result:
-        list_pengelola.append(i['label'])
+        list_pengelola.append(i['pengelola_name'])
         list_jumlah.append(i['hospital_count'])
-        list_uri.append(i['uri'])
+        list_uri.append(i['pengelola_iri'])
     # build tabel
     size = len(list_pengelola)
     tabel = build_header_tabel('Pengelola', 'Jumlah Rumah Sakit')
@@ -141,6 +143,7 @@ def get_tabel_pengelola(provinsi):
 
 def get_tabel_tipe_kelas(provinsi):
     result = query_tipe_kelas(provinsi)
+    print(result)
     # result = [
     #     {
     #         "label": "B",
@@ -163,13 +166,14 @@ def get_tabel_tipe_kelas(provinsi):
     #         "uri": "http://0.0.0.0:8080/dataRS#A"
     #     }
     # ]
+
     list_tipe = []
     list_jumlah = []
     list_uri = []
     for i in result:
-        list_tipe.append(i['label'])
+        list_tipe.append(i['class_name'])
         list_jumlah.append(i['hospital_count'])
-        list_uri.append(i['uri'])
+        list_uri.append(i['class_iri'])
     # build tabel
     size = len(list_tipe)
     tabel = build_header_tabel('Tipe Kelas', 'Jumlah Rumah Sakit')

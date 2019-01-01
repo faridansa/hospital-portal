@@ -1,4 +1,4 @@
-from flask import Flask, flash, redirect, render_template, request, session, abort
+from flask import Flask, flash, redirect, render_template, request, session, abort, url_for
 from backend.utils import *
 
 app = Flask(__name__)
@@ -12,7 +12,7 @@ def index():
         return render_template('homepage.html', provinsi=data_provinsi)
     else:
         selected_provinsi = request.form.get('dropdown')
-        return data_rs_provinsi(selected_provinsi)
+        return redirect(url_for('data_rs_provinsi', provinsi=selected_provinsi))
 
 
 @app.route("/data-rs/<provinsi>/pengelola")

@@ -49,16 +49,5 @@
 		<!--JavaScript at end of body for optimized loading-->
 		<script type="text/javascript" src="../static/js/materialize.min.js"></script>
 		<script src ="../static/js/materialize.min.jquery.js"></script>
-		<script type="text/javascript">
-			function dataProvinsi() {
-				var e = document.getElementById("dropdownMenu");
-				var chosenProv = e.options[e.selectedIndex].value;
-				str = chosenProv.replace(/\s+/g, '-').toLowerCase();
-				if(chosenProv != 'none') {
-					url = "/data-rs/" + str + "/statistik-tenaga-medis/"
-					window.location = url;
-				}
-			}
-		</script>
 	</body>
 </html>

@@ -62,21 +62,18 @@ SELECT DISTINCT ?hospital_label ?rs WHERE {
 
 
 def query_list_all_provinsi():
+    result = {}
     query = """
-SELECT ?province_label ?province WHERE {
+SELECT ?province_name ?province WHERE {
 ?province <http://www.wikidata.org/prop/direct/P31> <http://www.wikidata.org/entity/Q5098> .
-?province <http://www.w3.org/2000/01/rdf-schema#label> ?province_label.
-filter(lang(?province_label) = 'id')}
+?province <http://www.w3.org/2000/01/rdf-schema#label> ?province_name.
+filter(lang(?province_name) = 'id')}
     """
     r = requests.get(url, params={'format': 'json', 'query': query})
     data = r.json()
-    list_of_dict = []
     for item in data['results']['bindings']:
-        d = {}
-        d['province_iri'] = item['province']['value']
-        d['province_name'] = item['province_label']['value']
-        list_of_dict.append(d)
-    return list_of_dict
+        result[item['province']['value']] = item['province_name']['value']
+    return result
 
 
 def query_pengelola(provinsi):
@@ -239,7 +236,7 @@ SELECT DISTINCT ?hospital_label ?rs WHERE {
         d['pengelola_name'] = ""
         d['region_iri'] = ""
         d['region_name'] = ""
-    
+
     return list_of_dict
 
 
@@ -288,7 +285,7 @@ def query_detail_rs(rumah_sakit):
         else:
             d['no_fax'] = ""
         list_of_dict.append(d)
-    
+
     return list_of_dict
 
 
