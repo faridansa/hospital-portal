@@ -13,7 +13,8 @@ def get_query(file_name, query):
 
 def test(result):
     for row in result:
-        print (result[row])
+        for x in row:
+            print ("{}: {}".format(x, row[x]))
 
 
 def query_list_all_rs(provinsi):
@@ -30,45 +31,53 @@ SELECT ?province WHERE {
 
     file_name = '../static/data/data-rs-all.nt'
     query = """
-    SELECT ?hospital_name ?hospital WHERE {
+    SELECT ?hospital_label ?hospital WHERE {
     ?row <http://0.0.0.0:8080/dataRS#NAMA_RS> ?hospital.
-    ?row <http://www.w3.org/2000/01/rdf-schema#label> ?hospital_name.
+    ?row <http://www.w3.org/2000/01/rdf-schema#label> ?hospital_label.
     ?hospital <http://0.0.0.0:8080/dataRS#KAB_KOTA> ?region.
     ?region <http://www.wikidata.org/prop/direct/P131> <""" + provinsi_link[0] + """>.
     }"""
     result = get_query(file_name, query)
-    d = {}
+    list_of_dict = []
     for row in result:
-        d[str(row.asdict()['hospital'].toPython())] = str(row.asdict()['hospital_name'].toPython())
+        d = {}
+        d['iri'] = str(row.asdict()['hospital'].toPython())
+        d['hospital_name'] = str(row.asdict()['hospital_label'].toPython())
+        list_of_dict.append(d)
 
     query = """
-SELECT DISTINCT ?hospital_name ?rs WHERE {
+SELECT DISTINCT ?hospital_label ?rs WHERE {
 ?rs <http://www.wikidata.org/prop/direct/P31> <http://www.wikidata.org/entity/Q16917> .
-?rs <http://www.w3.org/2000/01/rdf-schema#label> ?hospital_name .
+?rs <http://www.w3.org/2000/01/rdf-schema#label> ?hospital_label .
 ?rs <http://www.wikidata.org/prop/direct/P131> ?region.
 ?region <http://www.wikidata.org/prop/direct/P131> <""" + provinsi_link[0] + """> . }
     """
     r = requests.get(url, params = {'format': 'json', 'query': query})
     data = r.json()
     for item in data['results']['bindings']:
-        d[item['rs']['value']] = item['hospital_name']['value']
-    
-    return d
+        d = {}
+        d['iri'] = item['rs']['value']
+        d['hospital_name'] = item['hospital_label']['value']
+        list_of_dict.append(d)
+    return list_of_dict
 
 
 def query_list_all_provinsi():
-    result = {}
     query = """
-SELECT ?province_name ?province WHERE {
+SELECT ?province_label ?province WHERE {
 ?province <http://www.wikidata.org/prop/direct/P31> <http://www.wikidata.org/entity/Q5098> .
-?province <http://www.w3.org/2000/01/rdf-schema#label> ?province_name.
-filter(lang(?province_name) = 'id')}
+?province <http://www.w3.org/2000/01/rdf-schema#label> ?province_label.
+filter(lang(?province_label) = 'id')}
     """
     r = requests.get(url, params = {'format': 'json', 'query': query})
     data = r.json()
+    list_of_dict = []
     for item in data['results']['bindings']:
-        result[item['province']['value']] = item['province_name']['value']
-    return result
+        d = {}
+        d['province_iri'] = item['province']['value']
+        d['province_name'] = item['province_label']['value']
+        list_of_dict.append(d)
+    return list_of_dict
 
 
 def query_pengelola(provinsi):
@@ -94,13 +103,14 @@ SELECT ?province WHERE {
     } GROUP BY ?pengelola"""
     
     result = get_query(file_name, query)
-    d = {}
+    list_of_dict = []
     for row in result:
-        iri = str(row.asdict()['pengelola'].toPython())
-        d[iri] = {}
-        d[iri]['label'] = str(row.asdict()['pengelola_label'].toPython())
-        d[iri]['hospital_count'] = str(row.asdict()['count'].toPython())
-    return d
+        d = {}
+        d['pengelola_iri'] = str(row.asdict()['pengelola'].toPython())
+        d['pengelola_name'] = str(row.asdict()['pengelola_label'].toPython())
+        d['hospital_count'] = str(row.asdict()['count'].toPython())
+        list_of_dict.append(d)
+    return list_of_dict
 
 
 def query_tipe_kelas(provinsi):
@@ -126,13 +136,14 @@ SELECT ?province WHERE {
     } GROUP BY ?class"""
     
     result = get_query(file_name, query)
-    d = {}
+    list_of_dict = []
     for row in result:
-        iri = str(row.asdict()['class'].toPython())
-        d[iri] = {}
-        d[iri]['label'] = str(row.asdict()['class_label'].toPython())
-        d[iri]['hospital_count'] = str(row.asdict()['count'].toPython())
-    return d
+        d = {}
+        d['class_iri'] = str(row.asdict()['class'].toPython())
+        d['class_name'] = str(row.asdict()['class_label'].toPython())
+        d['hospital_count'] = str(row.asdict()['count'].toPython())
+        list_of_dict.append(d)
+    return list_of_dict
 
 
 def query_rs_pengelola(pengelola, provinsi):
@@ -149,9 +160,9 @@ SELECT ?province WHERE {
 
     file_name = '../static/data/data-rs-all.nt'
     query = """
-    SELECT ?hospital ?hospital_name WHERE {
+    SELECT ?hospital ?hospital_label WHERE {
     ?row <http://0.0.0.0:8080/dataRS#NAMA_RS> ?hospital.
-    ?row <http://www.w3.org/2000/01/rdf-schema#label> ?hospital_name .
+    ?row <http://www.w3.org/2000/01/rdf-schema#label> ?hospital_label .
     ?hospital <http://0.0.0.0:8080/dataRS#PENYELENGGARA> ?pengelola.
     ?pengelola <http://www.w3.org/2000/01/rdf-schema#label> \"""" + pengelola + """\"@id-id .
     ?hospital <http://0.0.0.0:8080/dataRS#KAB_KOTA> ?region.
@@ -159,10 +170,13 @@ SELECT ?province WHERE {
     }"""
     
     result = get_query(file_name, query)
-    d = {}
+    list_of_dict = []
     for row in result:
-        d[str(row.asdict()['hospital'].toPython())] = str(row.asdict()['hospital_name'].toPython())
-    return d
+        d = {}
+        d['hospital_iri'] = str(row.asdict()['hospital'].toPython())
+        d['hospital_name'] = str(row.asdict()['hospital_label'].toPython())
+        list_of_dict.append(d)
+    return list_of_dict
 
 
 def query_rs(provinsi):
@@ -192,18 +206,19 @@ SELECT ?province WHERE {
     ?pengelola <http://www.w3.org/2000/01/rdf-schema#label> ?pengelola_label .
     }"""
     result = get_query(file_name, query)
-    d = {}
+    list_of_dict = []
     for row in result:
-        iri = str(row.asdict()['hospital'].toPython())
-        d[iri] = {}
-        d[iri]['hospital_name'] = str(row.asdict()['hospital_label'].toPython())
-        d[iri]['type_name'] = str(row.asdict()['type'].toPython())
-        d[iri]['class_iri'] = str(row.asdict()['class'].toPython())
-        d[iri]['class_name'] = str(row.asdict()['class_label'].toPython())
-        d[iri]['pengelola_iri'] = str(row.asdict()['pengelola'].toPython())
-        d[iri]['pengelola_name'] = str(row.asdict()['pengelola_label'].toPython())
-        d[iri]['region_iri'] = str(row.asdict()['region'].toPython())
-        d[iri]['region_name'] = str(row.asdict()['region_label'].toPython())
+        d = {}
+        d['hospital_iri'] = str(row.asdict()['hospital'].toPython())
+        d['hospital_name'] = str(row.asdict()['hospital_label'].toPython())
+        d['type_name'] = str(row.asdict()['type'].toPython())
+        d['class_iri'] = str(row.asdict()['class'].toPython())
+        d['class_name'] = str(row.asdict()['class_label'].toPython())
+        d['pengelola_iri'] = str(row.asdict()['pengelola'].toPython())
+        d['pengelola_name'] = str(row.asdict()['pengelola_label'].toPython())
+        d['region_iri'] = str(row.asdict()['region'].toPython())
+        d['region_name'] = str(row.asdict()['region_label'].toPython())
+        list_of_dict.append(d)
 
     query = """
 SELECT DISTINCT ?hospital_label ?rs WHERE {
@@ -215,16 +230,18 @@ SELECT DISTINCT ?hospital_label ?rs WHERE {
     r = requests.get(url, params = {'format': 'json', 'query': query})
     data = r.json()
     for item in data['results']['bindings']:
-        d[item['rs']['value']] = {}
-        d[item['rs']['value']]['hospital_name'] = item['hospital_label']['value']
-        d[item['rs']['value']]['type_iri'] = ""
-        d[item['rs']['value']]['class_iri'] = ""
-        d[item['rs']['value']]['class_name'] = ""
-        d[item['rs']['value']]['pengelola_iri'] = ""
-        d[item['rs']['value']]['pengelola_name'] = ""
-        d[item['rs']['value']]['region_iri'] = ""
+        d = {}
+        d['hospital_iri'] = item['rs']['value']
+        d['hospital_name'] = item['hospital_label']['value']
+        d['type_name'] = ""
+        d['class_iri'] = ""
+        d['class_name'] = ""
+        d['pengelola_iri'] = ""
+        d['pengelola_name'] = ""
+        d['region_iri'] = ""
+        d['region_name'] = ""
     
-    return d
+    return list_of_dict
 
 
 def query_detail_rs(rumah_sakit):
@@ -247,8 +264,9 @@ def query_detail_rs(rumah_sakit):
     OPTIONAL {?hospital <http://0.0.0.0:8080/dataRS#TELEPON> ?phone_label }
     OPTIONAL {?hospital <http://0.0.0.0:8080/dataRS#FAX> ?fax_label } }"""
     result = get_query(file_name, query)
-    d = {}
+    list_of_dict = []
     for row in result:
+        d = {}
         d['type_name'] = str(row.asdict()['type_label'].toPython())
         d['address_name'] = str(row.asdict()['address_label'].toPython())
         d['region_iri'] = str(row.asdict()['region'].toPython())
@@ -270,8 +288,9 @@ def query_detail_rs(rumah_sakit):
             d['no_fax'] = str(row.asdict()['fax_label'].toPython())
         else:
             d['no_fax'] = ""
+        list_of_dict.append(d)
     
-    return d
+    return list_of_dict
 
 
 def query_tipe_rs(tipe_rs, provinsi):
@@ -288,19 +307,22 @@ SELECT ?province WHERE {
 
     file_name = '../static/data/data-rs-all.nt'
     query = """
-    SELECT ?hospital ?hospital_name WHERE {
+    SELECT ?hospital ?hospital_label WHERE {
     ?row <http://0.0.0.0:8080/dataRS#NAMA_RS> ?hospital.
-    ?row <http://www.w3.org/2000/01/rdf-schema#label> ?hospital_name .
+    ?row <http://www.w3.org/2000/01/rdf-schema#label> ?hospital_label .
     ?hospital <http://0.0.0.0:8080/dataRS#JENIS_RS> \"""" + tipe_rs + """\"@id-id .
     ?hospital <http://0.0.0.0:8080/dataRS#KAB_KOTA> ?region.
     ?region <http://www.wikidata.org/prop/direct/P131> <""" + provinsi_link[0] + """>.
     }"""
     
     result = get_query(file_name, query)
-    d = {}
+    list_of_dict = []
     for row in result:
-        d[str(row.asdict()['hospital'].toPython())] = str(row.asdict()['hospital_name'].toPython())
-    return d
+        d = {}
+        d['hospital_iri'] = str(row.asdict()['hospital'].toPython())
+        d['hospital_name'] = str(row.asdict()['hospital_label'].toPython())
+        list_of_dict.append(d)
+    return list_of_dict
 
 
 def query_kelas_rs(kelas_rs, provinsi):
@@ -317,9 +339,9 @@ SELECT ?province WHERE {
 
     file_name = '../static/data/data-rs-all.nt'
     query = """
-    SELECT ?hospital ?hospital_name WHERE {
+    SELECT ?hospital ?hospital_label WHERE {
     ?row <http://0.0.0.0:8080/dataRS#NAMA_RS> ?hospital.
-    ?row <http://www.w3.org/2000/01/rdf-schema#label> ?hospital_name .
+    ?row <http://www.w3.org/2000/01/rdf-schema#label> ?hospital_label .
     ?hospital <http://0.0.0.0:8080/dataRS#KLS_RS> ?class.
     ?class <http://www.w3.org/2000/01/rdf-schema#label> \"""" + kelas_rs + """\"@id-id .
     ?hospital <http://0.0.0.0:8080/dataRS#KAB_KOTA> ?region.
@@ -327,13 +349,16 @@ SELECT ?province WHERE {
     }"""
     
     result = get_query(file_name, query)
-    d = {}
+    list_of_dict = []
     for row in result:
-        d[str(row.asdict()['hospital'].toPython())] = str(row.asdict()['hospital_name'].toPython())
-    return d
+        d = {}
+        d['hospital_iri'] = str(row.asdict()['hospital'].toPython())
+        d['hospital_name'] = str(row.asdict()['hospital_label'].toPython())
+        list_of_dict.append(d)
+    return list_of_dict
 
 
 if __name__ == '__main__':
-    res = query_rs("Daerah Khusus Ibukota Jakarta")
+    res = query_kelas_rs("A", "Daerah Khusus Ibukota Jakarta")
     # if you want to see the result
     test(res)
