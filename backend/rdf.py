@@ -98,16 +98,14 @@ SELECT ?province WHERE {
     } GROUP BY ?pengelola"""
 
     result = get_query(file_name, query)
-    print(type(result))
+    # print(type(result))
     d = {}
     try:
-        print('kesini')
-        print(len(result))
+        # print(len(result))
         iri = result.vars[0]
-        print(iri)
+        # print(iri)
         for row in result:
-            print('sini cuy')
-            print(row)
+            # print(row)
             iri = str(row.asdict()['pengelola'].toPython())
             # print(iri)
             d[iri] = {}
@@ -115,7 +113,6 @@ SELECT ?province WHERE {
             d[iri]['hospital_count'] = str(row.asdict()['count'].toPython())
         # print(d)
     except Exception as e:
-        print('kesana')
         print(e)
     return d
 

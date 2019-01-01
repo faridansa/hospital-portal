@@ -21,125 +21,34 @@
 		<div class="row">
 			<div class="col s12">
 				<ul class="tabs" id="tabs-swipe">
-					<li class="tab col s6"><a class="active" href="#" onclick="loadPengelola()";return false;>Pengelola</a></li>
+					<li class="tab col s6"><a class="active" href="#" onclick="loadPengelola()">Pengelola</a></li>
 					<li class="tab col s6"><a href="#" onclick="loadTipeKelas()";return false;>Tipe Kelas</a></li>
 				</ul>
 			</div>
 			<div id="content">
-				{{ tabel_pengelola }}
 				<div class="container">
-					<table class="highlight">
-						<thead>
-							<tr>
-								<th>Pengelola</th>
-								<th>Jumlah Rumah Sakit</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Alvin</td>
-								<td>Eclair</td>
-							</tr>
-							<tr>
-								<td>Alan</td>
-								<td>Jellybean</td>
-							</tr>
-							<tr>
-								<td>Jonathan</td>
-								<td>Lollipop</td>
-							</tr>
-						</tbody>
-					</table>
+		      <!-- return table --> {{tabel_pengelola | safe}}
+					{{tabel_tipe_kelas  | safe}}
 				</div>
-			</div>
-			<!-- <div id="swipe-1-content" class="col s12 blue">
-				Test 1
-				tab tipe pengelola
-				<div class="container">
-					<table class="highlight">
-						<thead>
-							<tr>
-								<th>Pengelola</th>
-								<th>Jumlah Rumah Sakit</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Alvin</td>
-								<td>Eclair</td>
-							</tr>
-							<tr>
-								<td>Alan</td>
-								<td>Jellybean</td>
-							</tr>
-							<tr>
-								<td>Jonathan</td>
-								<td>Lollipop</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-			<div id="swipe-2-content" class="col s12 red">
-				Test 2
-				tab tipe kelas
-				<div class="container">
-					<table class="highlight">
-						<thead>
-							<tr>
-								<th>Tipe Kelas</th>
-								<th>Jumlah Rumah Sakit</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Alvin</td>
-								<td>Eclair</td>
-							</tr>
-							<tr>
-								<td>Alan</td>
-								<td>Jellybean</td>
-							</tr>
-							<tr>
-								<td>Jonathan</td>
-								<td>Lollipop</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div> -->
-		</div>
-		<!-- tipe pengelola -->
-		<div class="container">
-      <!-- return table pengelola--> {{tabel_pengelola | safe}}
-		</div>
-		<!-- tipe kelas -->
-		<div class="container">
-			{{tabel_tipe_kelas | safe}}
-		</div>
 		<div class="row">
       <form class="form-inline" action="data-rs/{{provinsi}}">
   			<button class="waves-effect pink darken-2 btn">Lihat Daftar Rumah Sakit</button>
       </form>
 		</div>
-		<script type="text/javascript" src="../static/js/materialize.min.js"></script>
-		<script src ="../static/js/materialize.min.jquery.js"></script>
-		<script type="text/javascript">
-			// $(document).ready(function(){
-			// 	$("#tabs-swipe").tabs({
-			// 		swipeable: true,
-			// 		responsiveThreshold : Infinity
-			// 	});
-			// });
+		<script>
 			function loadPengelola() {
-				var tabel_pengelola = {{ tabel_pengelola }}
+				console.log('load pengelola');
+				var tabel_pengelola = {{ tabel_pengelola | safe }};
 				document.getElementById("content").innerHTML = tabel_pengelola;
 			}
 
 			function loadTipeKelas() {
-				var tabel_tipe_kelas = {{ tabel_tipe_kelas }}
+				console.log('load tipe');
+				var tabel_tipe_kelas = {{ tabel_tipe_kelas  | safe }};
 				document.getElementById("content").innerHTML = tabel_tipe_kelas;
 			}
 		</script>
+		<script type="text/javascript" src="../static/js/materialize.min.js"></script>
+		<script src ="../static/js/materialize.min.jquery.js"></script>
 	</body>
 </html>
