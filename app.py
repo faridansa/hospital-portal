@@ -37,8 +37,8 @@ def data_rs_pengelola(provinsi, pengelola):
 @app.route("/data-rs/<provinsi>")
 def data_rs(provinsi):
     print('DATA_RS')
-    # tabel = get_seluruh_rs(provinsi)
-    tabel = None
+    tabel = get_tabel_rs(provinsi)
+    # tabel = None
     return render_template('data-rs.html', provinsi=provinsi, tabel_rs=tabel)
 
 

@@ -15,25 +15,7 @@
 		<!-- daftar rs tipe ... contoh: RSJ di provinsi X -->
 		<h3 class="center-align">Daftar {{ tipe_rs }} di Provinsi {{ provinsi }}</h3>
 		<div class="container">
-			{{ tabel_tipe_rs }}
-			<table class="highlight">
-				<thead>
-					<tr>
-						<th>Nama Rumah Sakit</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Alvin</td>
-					</tr>
-					<tr>
-						<td>Alan</td>
-					</tr>
-					<tr>
-						<td>Jonathan</td>
-					</tr>
-				</tbody>
-			</table>
+			{{ tabel_tipe_rs | safe }}
 		</div>
 		<script type="text/javascript" src="../static/js/materialize.min.js"></script>
 		<script src ="../static/js/materialize.min.jquery.js"></script>

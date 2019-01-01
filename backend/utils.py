@@ -1,5 +1,4 @@
 from backend.rdf import *
-import json
 
 # list_provinsi = [
 #     'Aceh',
@@ -49,9 +48,8 @@ def build_header_tabel(*nama_kolom):
 
 def build_cell_tabel(data, flag_is_linked, uri):
     if flag_is_linked:
-        if ('/' in uri) and ('/' not in uri[:1]):
-            uri = uri.replace('/', '_')
-        print(uri)
+        if ('Swasta/Lainnya' in uri):
+            uri = uri.replace('Swasta/Lainnya', 'Swasta_Lainnya')
         cell = '<td><a href="%s">%s</a></td>' % (uri, data)
     else:
         cell = '<td>%s</td>' % data
@@ -110,7 +108,6 @@ def get_tabel_tipe_kelas(provinsi):
 
     for i in range(size):
         url = '/data-rs/%s/kelas-rs/%s' % (provinsi, list_kelas[i])
-        print(url)
         tabel += '<tr>%s' % build_cell_tabel(
             list_kelas[i], True, url)
         tabel += '%s</tr>' % build_cell_tabel(list_jumlah[i], False, None)
@@ -140,9 +137,34 @@ def get_rs_pengelola(pengelola, provinsi):
 
 
 def get_tabel_rs(provinsi):
-    data = query_rs(provinsi)
-    tabel = build_cell_tabel('Nama', 'Tipe', 'Kelas', 'Pengelola',
-                             'Wilayah', 'Kota/Kabupaten', data)
+    result = query_rs(provinsi)
+    list_nama = []
+    list_tipe = []
+    list_kelas = []
+    list_pengelola = []
+    list_wilayah = []
+    for i in result:
+        list_nama.append(i['hospital_name'])
+        list_tipe.append(i['type_name'])
+        list_kelas.append(i['class_name'])
+        list_pengelola.append(i['pengelola_name'])
+        list_wilayah.append(i['region_name'])
+    # build tabel
+    size = len(list_nama)
+    tabel = build_header_tabel('Nama', 'Tipe', 'Kelas', 'Pengelola', 'Wilayah')
+
+    for i in range(size):
+        url_nama = '/data-rs/detail/%s' % list_nama[i]
+        url_tipe = '/data-rs/%s/tipe-rs/%s' % (provinsi, list_tipe[i])
+        url_kelas = '/data-rs/%s/kelas-rs/%s' % (provinsi, list_kelas[i])
+        url_pengelola = '%s/%s' % (provinsi, list_pengelola[i])
+
+        tabel += '<tr>%s' % build_cell_tabel(list_nama[i], True, url_nama)
+        tabel += build_cell_tabel(list_tipe[i], True, url_tipe)
+        tabel += build_cell_tabel(list_kelas[i], True, url_kelas)
+        tabel += build_cell_tabel(list_pengelola[i], True, url_pengelola)
+        tabel += '%s</tr>' % build_cell_tabel(list_wilayah[i], False, None)
+    tabel += '</tbody></table>'
     return tabel
 
 
@@ -153,23 +175,22 @@ def get_detail_rs(rumah_sakit):
 
 def get_tabel_tipe_rs(tipe_rs, provinsi):
     result = query_tipe_rs(tipe_rs, provinsi)
-    print(result)
-    # list_nama = []
-# list_uri = []
-# for i in result:
-#     list_nama.append(i['hospital_name'])
-#     list_uri.append(i['hospital_iri'])
-# # build tabel
-# size = len(list_nama)
-# tabel = build_header_tabel('Nama Rumah Sakit')
-#
-# for i in range(size):
-#     url = '/data-rs/detail/%s' % list_nama[i]
-#     print('url %s' % url)
-#     tabel += '<tr>%s</tr>' % build_cell_tabel(
-#         list_nama[i], True, url)
-# tabel += '</tbody></table>'
-# return tabel
+    list_nama = []
+    list_uri = []
+    for i in result:
+        list_nama.append(i['hospital_name'])
+        list_uri.append(i['hospital_iri'])
+    # build tabel
+    size = len(list_nama)
+    tabel = build_header_tabel('Nama Rumah Sakit')
+
+    for i in range(size):
+        url = '/data-rs/detail/%s' % list_nama[i]
+        print('url %s' % url)
+        tabel += '<tr>%s</tr>' % build_cell_tabel(
+            list_nama[i], True, url)
+    tabel += '</tbody></table>'
+    return tabel
 
 
 def get_tabel_kelas_rs(kelas_rs, provinsi):

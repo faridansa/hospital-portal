@@ -13,36 +13,7 @@
 	<body>
 		<h3 class="center-align">Daftar Rumah Sakit di Provinsi {{ provinsi }}</h3>
 		<div class="container">
-			{{tabel_rs}}
-			<table class="highlight">
-				<thead>
-					<tr>
-						<th>Nama Rumah Sakit</th>
-						<th>Tipe</th>
-						<th>Kelas</th>
-						<th>Pengelola</th>
-						<th>Wilayah</th>
-						<th>Kota/Kabupaten</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Alvin</td>
-						<td>Eclair</td>
-						<td>$0.87</td>
-					</tr>
-					<tr>
-						<td>Alan</td>
-						<td>Jellybean</td>
-						<td>$3.76</td>
-					</tr>
-					<tr>
-						<td>Jonathan</td>
-						<td>Lollipop</td>
-						<td>$7.00</td>
-					</tr>
-				</tbody>
-			</table>
+			{{tabel_rs | safe}}
 		</div>
 		<script type="text/javascript" src="../static/js/materialize.min.js"></script>
 		<script src ="../static/js/materialize.min.jquery.js"></script>
