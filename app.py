@@ -14,22 +14,7 @@ def index():
         selected_provinsi = request.form.get('dropdown')
         return data_rs_provinsi(selected_provinsi)
 
-#
-# @app.route("/data-rs/<provinsi>/statistik-tenaga-medis")
-# def data_rs_provinsi_statisik_tenaga_medis(provinsi):
-#     tabel = get_tabel_statistik_tenaga_medis(provinsi)
-#     return render_template('data-rs-provinsi.html', provinsi=provinsi, tabel_stm=tabel)
-#
-#
-# @app.route("/data-rs/<provinsi>/tipe-perawatan")
-# def data_rs_provinsi_tipe_perawatan(provinsi):
-#     tabel = get_tipe_perawatan(provinsi)
-#     return render_template('data-rs-provinsi.html', provinsi=provinsi, tabel_tipe_perawatan=tabel)
 
-
-# tabel_tipe_kelas belum ada masuk ke parameter
-# namun sepertinya ku butuh untuk tampilin di
-# data-rs-provinsi.html tab 'tipe kelas'
 @app.route("/data-rs/<provinsi>/pengelola")
 def data_rs_provinsi(provinsi):
     tabel_pengelola = get_tabel_pengelola(provinsi)
@@ -70,18 +55,6 @@ def kelas_rs(provinsi, kelas_rs):
     # tabel = get_tabel_kelas_rs(kelas_rs, provinsi)
     tabel = None
     return render_template('kelas-rs.html', provinsi=provinsi, kelas_rs=kelas_rs, tabel_kelas_rs=tabel)
-
-#
-# @app.route("/data-rs/<wilayah>/jumlah-rs")
-# def jumlah_kamar_rs(wilayah):
-#     jumlah_kamar, tabel = get_tabel_rs_jumlah_kamar(wilayah)
-#     return render_template('jumlah-kamar.html', wilayah=wilayah, jumlah_kamar=jumlah_kamar, tabel_rs=tabel)
-#
-#
-# @app.route("/data-puskesmas/detail/<puskesmas>")
-# def detail_puskesmas(puskesmas):
-#     data = get_detail_puskesmas(puskesmas)
-#     return render_template('detail-puskesmas.html', puskesmas=puskesmas, detail=data)
 
 
 if __name__ == "__main__":
