@@ -53,16 +53,16 @@ def detail_rs(rumah_sakit):
 @app.route("/data-rs/<provinsi>/tipe-rs/<tipe_rs>")
 def tipe_rs(provinsi, tipe_rs):
     print('TIPE_RS')
-    # tabel = get_tabel_tipe_rs(tipe_rs, provinsi)
-    tabel = None
+    tabel = get_tabel_tipe_rs(tipe_rs, provinsi)
+    # tabel = None
     return render_template('tipe-rs.html', provinsi=provinsi, tipe_rs=tipe_rs, tabel_tipe_rs=tabel)
 
 
 @app.route("/data-rs/<provinsi>/kelas-rs/<kelas_rs>")
 def kelas_rs(provinsi, kelas_rs):
     print('KELAS_RS')
-    # tabel = get_tabel_kelas_rs(kelas_rs, provinsi)
-    tabel = None
+    tabel = get_tabel_kelas_rs(kelas_rs, provinsi)
+    # tabel = None
     return render_template('kelas-rs.html', provinsi=provinsi, kelas_rs=kelas_rs, tabel_kelas_rs=tabel)
 
 

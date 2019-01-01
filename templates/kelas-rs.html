@@ -14,25 +14,7 @@
 	<body>
 		<h3 class="center-align">Daftar RS Kelas {{ kelas_rs }} di Provinsi {{ provinsi }}</h3>
 		<div class="container">
-			<!-- return tabel here -->{{tabel_kelas_rs}}
-			<table class="highlight">
-				<thead>
-					<tr>
-						<th>Nama Rumah Sakit</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Alvin</td>
-					</tr>
-					<tr>
-						<td>Alan</td>
-					</tr>
-					<tr>
-						<td>Jonathan</td>
-					</tr>
-				</tbody>
-			</table>
+			<!-- return tabel here -->{{tabel_kelas_rs | safe}}
 		</div>
 		<script type="text/javascript" src="../static/js/materialize.min.js"></script>
 		<script src ="../static/js/materialize.min.jquery.js"></script>
