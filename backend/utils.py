@@ -170,7 +170,16 @@ def get_tabel_rs(provinsi):
 
 def get_detail_rs(rumah_sakit):
     data = query_detail_rs(rumah_sakit)
-    return data
+    tipe_rs = data[0]["type_name"]
+    alamat_rs = data[0]["address_name"]
+    wilayah_rs = data[0]["region_name"]
+    direktur_rs = data[0]["direktur_name"]
+    kelas_rs = data[0]["class_name"]
+    pengelola_rs = data[0]["pengelola_name"]
+    kode_pos_rs = data[0]["kode_pos"]
+    no_telp_rs = data[0]["no_telp"]
+    no_fax_rs = data[0]["no_fax"]
+    return (tipe_rs, alamat_rs, wilayah_rs, direktur_rs, kelas_rs, pengelola_rs, kode_pos_rs, no_telp_rs, no_fax_rs)
 
 
 def get_tabel_tipe_rs(tipe_rs, provinsi):

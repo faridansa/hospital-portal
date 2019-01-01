@@ -30,7 +30,6 @@ def data_rs_pengelola(provinsi, pengelola):
     if '_' in pengelola:
         pengelola = pengelola.replace('_', '/')
     tabel = get_rs_pengelola(pengelola, provinsi)
-    # tabel = None
     return render_template('data-rs-pengelola.html', provinsi=provinsi, pengelola=pengelola, tabel_pengelola=tabel)
 
 
@@ -38,23 +37,21 @@ def data_rs_pengelola(provinsi, pengelola):
 def data_rs(provinsi):
     print('DATA_RS')
     tabel = get_tabel_rs(provinsi)
-    # tabel = None
     return render_template('data-rs.html', provinsi=provinsi, tabel_rs=tabel)
 
 
 @app.route("/data-rs/detail/<rumah_sakit>")
 def detail_rs(rumah_sakit):
     print('DETAIL_RS')
-    data = get_detail_rs(rumah_sakit)
-    # data = None
-    return render_template('detail-rs.html', rumah_sakit=rumah_sakit, detail=data)
+    tipe_rs, alamat_rs, wilayah_rs, direktur_rs, kelas_rs, pengelola_rs, kode_pos_rs, no_telp_rs, no_fax_rs = get_detail_rs(
+        rumah_sakit)
+    return render_template('detail-rs.html', rumah_sakit=rumah_sakit, tipe_rs=tipe_rs, alamat_rs=alamat_rs, wilayah_rs=wilayah_rs, direktur_rs=direktur_rs, kelas_rs=kelas_rs, pengelola_rs=pengelola_rs, kode_pos_rs=kode_pos_rs, no_telp_rs=no_telp_rs, no_fax_rs=no_fax_rs)
 
 
 @app.route("/data-rs/<provinsi>/tipe-rs/<tipe_rs>")
 def tipe_rs(provinsi, tipe_rs):
     print('TIPE_RS')
     tabel = get_tabel_tipe_rs(tipe_rs, provinsi)
-    # tabel = None
     return render_template('tipe-rs.html', provinsi=provinsi, tipe_rs=tipe_rs, tabel_tipe_rs=tabel)
 
 
@@ -62,7 +59,6 @@ def tipe_rs(provinsi, tipe_rs):
 def kelas_rs(provinsi, kelas_rs):
     print('KELAS_RS')
     tabel = get_tabel_kelas_rs(kelas_rs, provinsi)
-    # tabel = None
     return render_template('kelas-rs.html', provinsi=provinsi, kelas_rs=kelas_rs, tabel_kelas_rs=tabel)
 
 
