@@ -154,7 +154,7 @@ SELECT ?province WHERE {
     for item in data['results']['bindings']:
         provinsi_link.append(item['province']['value'])
 
-    file_name = '../static/data/data-rs-all.nt'
+    file_name = 'static/data/data-rs-all.nt'
     query = """
     SELECT ?hospital ?hospital_label WHERE {
     ?row <http://0.0.0.0:8080/dataRS#NAMA_RS> ?hospital.
@@ -187,7 +187,7 @@ SELECT ?province WHERE {
     for item in data['results']['bindings']:
         provinsi_link.append(item['province']['value'])
 
-    file_name = '../static/data/data-rs-all.nt'
+    file_name = 'static/data/data-rs-all.nt'
     query = """
     SELECT ?hospital ?hospital_label ?type ?class ?class_label ?pengelola ?pengelola_label ?region ?region_label WHERE {
     ?row <http://0.0.0.0:8080/dataRS#NAMA_RS> ?hospital.
@@ -241,7 +241,7 @@ SELECT DISTINCT ?hospital_label ?rs WHERE {
 
 
 def query_detail_rs(rumah_sakit):
-    file_name = '../static/data/data-rs-all.nt'
+    file_name = 'static/data/data-rs-all.nt'
     query = """
     SELECT ?type_label ?address_label ?region ?region_label ?post_label ?phone_label ?fax_label
     ?direktur_label ?class ?class_label ?pengelola ?pengelola_label WHERE {
@@ -301,7 +301,7 @@ SELECT ?province WHERE {
     for item in data['results']['bindings']:
         provinsi_link.append(item['province']['value'])
 
-    file_name = '../static/data/data-rs-all.nt'
+    file_name = 'static/data/data-rs-all.nt'
     query = """
     SELECT ?hospital ?hospital_label WHERE {
     ?row <http://0.0.0.0:8080/dataRS#NAMA_RS> ?hospital.
@@ -333,7 +333,7 @@ SELECT ?province WHERE {
     for item in data['results']['bindings']:
         provinsi_link.append(item['province']['value'])
 
-    file_name = '../static/data/data-rs-all.nt'
+    file_name = 'static/data/data-rs-all.nt'
     query = """
     SELECT ?hospital ?hospital_label WHERE {
     ?row <http://0.0.0.0:8080/dataRS#NAMA_RS> ?hospital.

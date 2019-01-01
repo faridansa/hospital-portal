@@ -49,38 +49,13 @@ def build_header_tabel(*nama_kolom):
 
 def build_cell_tabel(data, flag_is_linked, uri):
     if flag_is_linked:
-        cell = '<td><a href="#%s">%s</a></td>' % (uri, data)
+        if ('/' in uri) and ('/' not in uri[:1]):
+            uri = uri.replace('/', '_')
+        print(uri)
+        cell = '<td><a href="%s">%s</a></td>' % (uri, data)
     else:
         cell = '<td>%s</td>' % data
     return cell
-
-    # size = len(kolom) - 1
-    # data_uri = kolom[-2]
-    # bool_is_linked = kolom[-1]
-    # print(bool_is_linked)
-    # index_data = int(size / 2)
-    # size_data = len(data_uri)
-    # tabel = '<table class="highlight"><thead><tr>'
-    # for i in range(index_data):
-    #     tabel += '<th>%s</th>' % kolom[i]
-    # tabel += '</tr></thead><tbody>'
-    #
-    # for i in range(size_data):
-    #     flag_linked = False
-    #     # if (i < index_data) and (bool_is_linked[i]) and:
-    #     tabel += '<tr>'
-    #     # loop per row
-    #     for data in range(index_data, size - 1):
-    #         element = kolom[data][i]
-    #         if flag_linked:
-    #             print(element)
-    #             # tabel += '<td> < a href = "#' + \
-    #             #     data_uri[i] + '" > %s < /a > < / td >' % element
-    #
-    #         tabel += '<td>%s</td>' % element
-    #     tabel += '</tr>'
-    # tabel += '</tbody></table>'
-    # return tabel
 
 
 def get_seluruh_provinsi():
@@ -101,27 +76,6 @@ def get_seluruh_rs(provinsi):
 
 def get_tabel_pengelola(provinsi):
     result = query_pengelola(provinsi)
-    print(result)
-#     result = [{
-#     "label": "Organisasi Sosial",
-#     "hospital_count": "2",
-#     "uri": "http://0.0.0.0:8080/dataRS#Organisasi_Sosial"
-# }, {
-#     "label": "Swasta/Lainnya",
-#     "hospital_count": "4",
-#     "uri": "http://0.0.0.0:8080/dataRS#Swasta_Lainnya"
-# },
-#     {
-#         "label": "Kemkes",
-#     "hospital_count": "1",
-#     "uri": "http://0.0.0.0:8080/dataRS#Kemkes"
-# },
-#     {
-#         "label": "POLRI",
-#     "hospital_count": "1",
-#     "uri": "http://0.0.0.0:8080/dataRS#POLRI"
-# }]
-
     list_pengelola = []
     list_jumlah = []
     list_uri = []
@@ -135,7 +89,7 @@ def get_tabel_pengelola(provinsi):
 
     for i in range(size):
         tabel += '<tr>%s' % build_cell_tabel(
-            list_pengelola[i], True, list_uri[i])
+            list_pengelola[i], True, list_pengelola[i])
         tabel += '%s</tr>' % build_cell_tabel(list_jumlah[i], False, None)
     tabel += '</tbody></table>'
     return tabel
@@ -143,30 +97,6 @@ def get_tabel_pengelola(provinsi):
 
 def get_tabel_tipe_kelas(provinsi):
     result = query_tipe_kelas(provinsi)
-    print(result)
-    # result = [
-    #     {
-    #         "label": "B",
-    #         "hospital_count": "2",
-    #         "uri": "http://0.0.0.0:8080/dataRS#B"
-    #     },
-    #     {
-    #         "label": "C",
-    #         "hospital_count": "3",
-    #         "uri": "http://0.0.0.0:8080/dataRS#C"
-    #     },
-    #     {
-    #         "label": "D",
-    #         "hospital_count": "1",
-    #         "uri": "http://0.0.0.0:8080/dataRS#D"
-    #     },
-    #     {
-    #         "label": "A",
-    #         "hospital_count": "2",
-    #         "uri": "http://0.0.0.0:8080/dataRS#A"
-    #     }
-    # ]
-
     list_tipe = []
     list_jumlah = []
     list_uri = []
@@ -180,15 +110,30 @@ def get_tabel_tipe_kelas(provinsi):
 
     for i in range(size):
         tabel += '<tr>%s' % build_cell_tabel(
-            list_tipe[i], True, list_uri[i])
+            list_tipe[i], True, list_tipe[i])
         tabel += '%s</tr>' % build_cell_tabel(list_jumlah[i], False, None)
     tabel += '</tbody></table>'
     return tabel
 
 
 def get_rs_pengelola(pengelola, provinsi):
-    data = query_rs_pengelola(pengelola, provinsi)
-    tabel = build_cell_tabel('Nama Rumah Sakit', data)
+    result = query_rs_pengelola(pengelola, provinsi)
+    print(result)
+    list_nama = []
+    list_uri = []
+    for i in result:
+        list_nama.append(i['hospital_name'])
+        list_uri.append(i['hospital_iri'])
+    # build tabel
+    size = len(list_nama)
+    tabel = build_header_tabel('Nama Rumah Sakit')
+
+    for i in range(size):
+        url = '/data-rs/detail/%s' % list_nama[i]
+        print('url %s' % url)
+        tabel += '<tr>%s</tr>' % build_cell_tabel(
+            list_nama[i], True, url)
+    tabel += '</tbody></table>'
     return tabel
 
 
