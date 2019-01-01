@@ -90,15 +90,13 @@ def get_seluruh_rs(provinsi):
 
 def get_tabel_pengelola(provinsi):
     data = query_pengelola(provinsi)
-    # print(data)
-    tabel = build_tabel('Pengelola', 'Jumlah RS', 'Jumlah Tempat Tidur', data)
+    tabel = build_tabel('Pengelola', 'Jumlah RS', data)
     return tabel
 
 
 def get_tabel_tipe_kelas(provinsi):
     data = query_tipe_kelas(provinsi)
-    # print(data)
-    tabel = build_tabel('Tipe Kelas', 'Jumlah RS', 'Jumlah Tempat Tidur', data)
+    tabel = build_tabel('Tipe Kelas', 'Jumlah RS', data)
     return tabel
 
 
@@ -110,7 +108,8 @@ def get_rs_pengelola(pengelola, provinsi):
 
 def get_tabel_rs(provinsi):
     data = query_rs(provinsi)
-    tabel = build_tabel('Nama', 'Tipe', 'Kelas', 'Pengelola', 'Wilayah', data)
+    tabel = build_tabel('Nama', 'Tipe', 'Kelas', 'Pengelola',
+                        'Wilayah', 'Kota/Kabupaten', data)
     return tabel
 
 
@@ -127,18 +126,17 @@ def get_tabel_tipe_rs(tipe_rs, provinsi):
 
 def get_tabel_kelas_rs(kelas_rs, provinsi):
     data = query_kelas_rs(kelas_rs, provinsi)
-    tabel = build_tabel('Nama RS',
-                        data)
+    tabel = build_tabel('Nama RS', data)
     return tabel
 
 
-def get_tabel_rs_jumlah_kamar(wilayah):
-    data = query_rs_wilayah(wilayah)
-    tabel = build_tabel('Nama RS', data)
-    jumlah_kamar = len(data)
-    return (jumlah_kamar, tabel)
-
-
-def get_detail_puskesmas(puskesmas):
-    data = query_detail_puskesmas(puskesmas)
-    return data
+# def get_tabel_rs_jumlah_kamar(wilayah):
+#     data = query_rs_wilayah(wilayah)
+#     tabel = build_tabel('Nama RS', data)
+#     jumlah_kamar = len(data)
+#     return (jumlah_kamar, tabel)
+#
+#
+# def get_detail_puskesmas(puskesmas):
+#     data = query_detail_puskesmas(puskesmas)
+#     return data

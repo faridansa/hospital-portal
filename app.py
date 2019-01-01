@@ -27,6 +27,9 @@ def index():
 #     return render_template('data-rs-provinsi.html', provinsi=provinsi, tabel_tipe_perawatan=tabel)
 
 
+# tabel_tipe_kelas belum ada masuk ke parameter
+# namun sepertinya ku butuh untuk tampilin di
+# data-rs-provinsi.html tab 'tipe kelas'
 @app.route("/data-rs/<provinsi>/pengelola")
 def data_rs_provinsi(provinsi):
     tabel_pengelola = get_tabel_pengelola(provinsi)
@@ -36,13 +39,15 @@ def data_rs_provinsi(provinsi):
 
 @app.route("/data-rs/<provinsi>/<pengelola>")
 def data_rs_pengelola(provinsi, pengelola):
-    tabel = get_rs_pengelola(pengelola, provinsi)
+    # tabel = get_rs_pengelola(pengelola, provinsi)
+    tabel = None
     return render_template('data-rs-pengelola.html', provinsi=provinsi, pengelola=pengelola, tabel_pengelola=tabel)
 
 
 @app.route("/data-rs/<provinsi>")
 def data_rs(provinsi):
-    tabel = get_seluruh_rs(provinsi)
+    # tabel = get_seluruh_rs(provinsi)
+    tabel = None
     return render_template('data-rs.html', provinsi=provinsi, tabel_rs=tabel)
 
 

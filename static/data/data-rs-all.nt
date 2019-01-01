@@ -668,7 +668,6 @@
 <http://0.0.0.0:8080/dataRS#RS_Umum_Aghisna_Medika_Kroya> <http://0.0.0.0:8080/dataRS#ALAMAT> "Jl. Yos Sudarso No. 1 Karangmangu Kroya"@id-id .
 <http://0.0.0.0:8080/dataRS#RS_Umum_Aghisna_Medika_Kroya> <http://0.0.0.0:8080/dataRS#KODE_POS> "53282"@id-id .
 <http://0.0.0.0:8080/dataRS#RS_Umum_Aghisna_Medika_Kroya> <http://0.0.0.0:8080/dataRS#TELEPON> "(0282) 492260"@id-id .
-<http://0.0.0.0:8080/dataRS#RS_Umum_Aghisna_Medika_Kroya> <http://0.0.0.0:8080/dataRS#FAX> "-"@id-id .
 <http://0.0.0.0:8080/dataRS#RS_Umum_Aghisna_Medika_Kroya> <http://0.0.0.0:8080/dataRS#TANGGAL_UPDATE> "24/10/2018"@id-id .
 <http://0.0.0.0:8080/dataRS#row=53> <http://0.0.0.0:8080/dataRS#NAMA_RS> <http://0.0.0.0:8080/dataRS#RS_Ibu_dan_Anak_Muhaya> .
 <http://0.0.0.0:8080/dataRS#RS_Ibu_dan_Anak_Muhaya> <http://0.0.0.0:8080/dataRS#KLS_RS> <http://0.0.0.0:8080/dataRS#C> .
@@ -732,7 +731,6 @@
 <http://0.0.0.0:8080/dataRS#RS_Umum_Pratama_Tambu> <http://0.0.0.0:8080/dataRS#ALAMAT> "Jl. Samudera Desa Mapane Kec. Baselang"@id-id .
 <http://0.0.0.0:8080/dataRS#RS_Umum_Pratama_Tambu> <http://0.0.0.0:8080/dataRS#KODE_POS> "94355"@id-id .
 <http://0.0.0.0:8080/dataRS#RS_Umum_Pratama_Tambu> <http://0.0.0.0:8080/dataRS#TELEPON> "8114509411"@id-id .
-<http://0.0.0.0:8080/dataRS#RS_Umum_Pratama_Tambu> <http://0.0.0.0:8080/dataRS#FAX> "-"@id-id .
 <http://0.0.0.0:8080/dataRS#RS_Umum_Pratama_Tambu> <http://0.0.0.0:8080/dataRS#TANGGAL_UPDATE> "24/10/2018"@id-id .
 <http://0.0.0.0:8080/dataRS#row=58> <http://0.0.0.0:8080/dataRS#NAMA_RS> <http://0.0.0.0:8080/dataRS#RS_Ibu_dan_Anak_Bunda_Aliyah> .
 <http://0.0.0.0:8080/dataRS#RS_Ibu_dan_Anak_Bunda_Aliyah> <http://0.0.0.0:8080/dataRS#KLS_RS> <http://0.0.0.0:8080/dataRS#C> .
@@ -1274,7 +1272,6 @@
 <http://0.0.0.0:8080/dataRS#RS_Umum_Kelas_D_Kota_Palangka_Raya> <http://0.0.0.0:8080/dataRS#ALAMAT> "Jl. Mahir Mahar KM. 18.5 Kalampangan"@id-id .
 <http://0.0.0.0:8080/dataRS#RS_Umum_Kelas_D_Kota_Palangka_Raya> <http://0.0.0.0:8080/dataRS#KODE_POS> "73114"@id-id .
 <http://0.0.0.0:8080/dataRS#RS_Umum_Kelas_D_Kota_Palangka_Raya> <http://0.0.0.0:8080/dataRS#TELEPON> "0536-3246101"@id-id .
-<http://0.0.0.0:8080/dataRS#RS_Umum_Kelas_D_Kota_Palangka_Raya> <http://0.0.0.0:8080/dataRS#FAX> "0"@id-id .
 <http://0.0.0.0:8080/dataRS#RS_Umum_Kelas_D_Kota_Palangka_Raya> <http://0.0.0.0:8080/dataRS#TANGGAL_UPDATE> "23/10/2018"@id-id .
 <http://0.0.0.0:8080/dataRS#row=100> <http://0.0.0.0:8080/dataRS#NAMA_RS> <http://0.0.0.0:8080/dataRS#RS_Umum_Pertamedika_Ummi_Rosnati> .
 <http://0.0.0.0:8080/dataRS#RS_Umum_Pertamedika_Ummi_Rosnati> <http://0.0.0.0:8080/dataRS#KLS_RS> <http://0.0.0.0:8080/dataRS#C> .
@@ -1792,8 +1789,6 @@
 <http://0.0.0.0:8080/dataRS#RS_Umum_Daerah_Konawe_Selatan> <http://0.0.0.0:8080/dataRS#DIREKTUR> "dr. Boni Lambang Pramana. M. Kes"@id-id .
 <http://0.0.0.0:8080/dataRS#RS_Umum_Daerah_Konawe_Selatan> <http://0.0.0.0:8080/dataRS#ALAMAT> "Jl. Poros Andoolo No. 1"@id-id .
 <http://0.0.0.0:8080/dataRS#RS_Umum_Daerah_Konawe_Selatan> <http://0.0.0.0:8080/dataRS#KODE_POS> "93883"@id-id .
-<http://0.0.0.0:8080/dataRS#RS_Umum_Daerah_Konawe_Selatan> <http://0.0.0.0:8080/dataRS#TELEPON> "-"@id-id .
-<http://0.0.0.0:8080/dataRS#RS_Umum_Daerah_Konawe_Selatan> <http://0.0.0.0:8080/dataRS#FAX> "-"@id-id .
 <http://0.0.0.0:8080/dataRS#RS_Umum_Daerah_Konawe_Selatan> <http://0.0.0.0:8080/dataRS#TANGGAL_UPDATE> "22/10/2018"@id-id .
 <http://0.0.0.0:8080/dataRS#row=140> <http://0.0.0.0:8080/dataRS#NAMA_RS> <http://0.0.0.0:8080/dataRS#RS_Umum_Daerah_Kota_Tangerang_Selatan> .
 <http://0.0.0.0:8080/dataRS#RS_Umum_Daerah_Kota_Tangerang_Selatan> <http://0.0.0.0:8080/dataRS#KLS_RS> <http://0.0.0.0:8080/dataRS#C> .
@@ -1818,8 +1813,6 @@
 <http://0.0.0.0:8080/dataRS#RS_Umum_Daerah_Weda> <http://0.0.0.0:8080/dataRS#DIREKTUR> "dr. Fransisren"@id-id .
 <http://0.0.0.0:8080/dataRS#RS_Umum_Daerah_Weda> <http://0.0.0.0:8080/dataRS#ALAMAT> "JL. Raya Weda, Desa Wedana"@id-id .
 <http://0.0.0.0:8080/dataRS#RS_Umum_Daerah_Weda> <http://0.0.0.0:8080/dataRS#KODE_POS> "97853"@id-id .
-<http://0.0.0.0:8080/dataRS#RS_Umum_Daerah_Weda> <http://0.0.0.0:8080/dataRS#TELEPON> "-"@id-id .
-<http://0.0.0.0:8080/dataRS#RS_Umum_Daerah_Weda> <http://0.0.0.0:8080/dataRS#FAX> "-"@id-id .
 <http://0.0.0.0:8080/dataRS#RS_Umum_Daerah_Weda> <http://0.0.0.0:8080/dataRS#TANGGAL_UPDATE> "22/10/2018"@id-id .
 <http://0.0.0.0:8080/dataRS#row=142> <http://0.0.0.0:8080/dataRS#NAMA_RS> <http://0.0.0.0:8080/dataRS#RS_Umum_Daerah_Balaraja> .
 <http://0.0.0.0:8080/dataRS#RS_Umum_Daerah_Balaraja> <http://0.0.0.0:8080/dataRS#KLS_RS> <http://0.0.0.0:8080/dataRS#B> .
@@ -1895,8 +1888,6 @@
 <http://0.0.0.0:8080/dataRS#RS_Umum_Daerah_Bergerak_Jemaja> <http://0.0.0.0:8080/dataRS#DIREKTUR> "dr. Agustino Ahdia Putra"@id-id .
 <http://0.0.0.0:8080/dataRS#RS_Umum_Daerah_Bergerak_Jemaja> <http://0.0.0.0:8080/dataRS#ALAMAT> "Jl. Padang Melang"@id-id .
 <http://0.0.0.0:8080/dataRS#RS_Umum_Daerah_Bergerak_Jemaja> <http://0.0.0.0:8080/dataRS#KODE_POS> "29792"@id-id .
-<http://0.0.0.0:8080/dataRS#RS_Umum_Daerah_Bergerak_Jemaja> <http://0.0.0.0:8080/dataRS#TELEPON> "--"@id-id .
-<http://0.0.0.0:8080/dataRS#RS_Umum_Daerah_Bergerak_Jemaja> <http://0.0.0.0:8080/dataRS#FAX> "--"@id-id .
 <http://0.0.0.0:8080/dataRS#RS_Umum_Daerah_Bergerak_Jemaja> <http://0.0.0.0:8080/dataRS#TANGGAL_UPDATE> "22/10/2018"@id-id .
 <http://0.0.0.0:8080/dataRS#row=148> <http://0.0.0.0:8080/dataRS#NAMA_RS> <http://0.0.0.0:8080/dataRS#RS_Ibu_dan_Anak_Harapan_Mulia> .
 <http://0.0.0.0:8080/dataRS#RS_Ibu_dan_Anak_Harapan_Mulia> <http://0.0.0.0:8080/dataRS#KLS_RS> <http://0.0.0.0:8080/dataRS#C> .
@@ -1934,7 +1925,6 @@
 <http://0.0.0.0:8080/dataRS#RS_Umum_PKU_Muhammadiyah_Petanahan_Kebumen> <http://0.0.0.0:8080/dataRS#ALAMAT> "Jl. Daendels, Munggu Petanahan"@id-id .
 <http://0.0.0.0:8080/dataRS#RS_Umum_PKU_Muhammadiyah_Petanahan_Kebumen> <http://0.0.0.0:8080/dataRS#KODE_POS> "54382"@id-id .
 <http://0.0.0.0:8080/dataRS#RS_Umum_PKU_Muhammadiyah_Petanahan_Kebumen> <http://0.0.0.0:8080/dataRS#TELEPON> "(0287)6655285"@id-id .
-<http://0.0.0.0:8080/dataRS#RS_Umum_PKU_Muhammadiyah_Petanahan_Kebumen> <http://0.0.0.0:8080/dataRS#FAX> "-"@id-id .
 <http://0.0.0.0:8080/dataRS#RS_Umum_PKU_Muhammadiyah_Petanahan_Kebumen> <http://0.0.0.0:8080/dataRS#TANGGAL_UPDATE> "22/10/2018"@id-id .
 <http://0.0.0.0:8080/dataRS#row=151> <http://0.0.0.0:8080/dataRS#NAMA_RS> <http://0.0.0.0:8080/dataRS#RS_Umum_Mitra_Keluarga_Husada_Klaten> .
 <http://0.0.0.0:8080/dataRS#RS_Umum_Mitra_Keluarga_Husada_Klaten> <http://0.0.0.0:8080/dataRS#KLS_RS> <http://0.0.0.0:8080/dataRS#D> .
@@ -1983,7 +1973,6 @@
 <http://0.0.0.0:8080/dataRS#RS_Umum_Cahaya> <http://0.0.0.0:8080/dataRS#ALAMAT> "Jl Lintas Riau Ujung Tanjung, Kec. Tanah Puth RT 024 RW 009"@id-id .
 <http://0.0.0.0:8080/dataRS#RS_Umum_Cahaya> <http://0.0.0.0:8080/dataRS#KODE_POS> "28911"@id-id .
 <http://0.0.0.0:8080/dataRS#RS_Umum_Cahaya> <http://0.0.0.0:8080/dataRS#TELEPON> "81266818300"@id-id .
-<http://0.0.0.0:8080/dataRS#RS_Umum_Cahaya> <http://0.0.0.0:8080/dataRS#FAX> "-"@id-id .
 <http://0.0.0.0:8080/dataRS#RS_Umum_Cahaya> <http://0.0.0.0:8080/dataRS#TANGGAL_UPDATE> "22/10/2018"@id-id .
 <http://0.0.0.0:8080/dataRS#row=155> <http://0.0.0.0:8080/dataRS#NAMA_RS> <http://0.0.0.0:8080/dataRS#RS_Ibu_dan_Anak_Frisdhy_Angel> .
 <http://0.0.0.0:8080/dataRS#RS_Ibu_dan_Anak_Frisdhy_Angel> <http://0.0.0.0:8080/dataRS#KLS_RS> <http://0.0.0.0:8080/dataRS#C> .
@@ -2486,7 +2475,6 @@
 <http://0.0.0.0:8080/dataRS#RS_Islam> <http://0.0.0.0:8080/dataRS#ALAMAT> "Jl. Prof. HB. Jassin No.457, Gorontalo"@id-id .
 <http://0.0.0.0:8080/dataRS#RS_Islam> <http://0.0.0.0:8080/dataRS#KODE_POS> "96115"@id-id .
 <http://0.0.0.0:8080/dataRS#RS_Islam> <http://0.0.0.0:8080/dataRS#TELEPON> "0435-820830"@id-id .
-<http://0.0.0.0:8080/dataRS#RS_Islam> <http://0.0.0.0:8080/dataRS#FAX> "-"@id-id .
 <http://0.0.0.0:8080/dataRS#RS_Islam> <http://0.0.0.0:8080/dataRS#TANGGAL_UPDATE> "19/10/2018"@id-id .
 <http://0.0.0.0:8080/dataRS#row=194> <http://0.0.0.0:8080/dataRS#NAMA_RS> <http://0.0.0.0:8080/dataRS#RS_Umum_Maguan_Husada> .
 <http://0.0.0.0:8080/dataRS#RS_Umum_Maguan_Husada> <http://0.0.0.0:8080/dataRS#KLS_RS> <http://0.0.0.0:8080/dataRS#D> .
@@ -2499,7 +2487,6 @@
 <http://0.0.0.0:8080/dataRS#RS_Umum_Maguan_Husada> <http://0.0.0.0:8080/dataRS#ALAMAT> "Jl. Raya Praci-gribelah Km.6 Suci, Pracimantoro"@id-id .
 <http://0.0.0.0:8080/dataRS#RS_Umum_Maguan_Husada> <http://0.0.0.0:8080/dataRS#KODE_POS> "57664"@id-id .
 <http://0.0.0.0:8080/dataRS#RS_Umum_Maguan_Husada> <http://0.0.0.0:8080/dataRS#TELEPON> "82324579795"@id-id .
-<http://0.0.0.0:8080/dataRS#RS_Umum_Maguan_Husada> <http://0.0.0.0:8080/dataRS#FAX> "-"@id-id .
 <http://0.0.0.0:8080/dataRS#RS_Umum_Maguan_Husada> <http://0.0.0.0:8080/dataRS#TANGGAL_UPDATE> "19/10/2018"@id-id .
 <http://0.0.0.0:8080/dataRS#row=195> <http://0.0.0.0:8080/dataRS#NAMA_RS> <http://0.0.0.0:8080/dataRS#RS_Umum_Citra_Bunda_Medical_Center_Padang> .
 <http://0.0.0.0:8080/dataRS#RS_Umum_Citra_Bunda_Medical_Center_Padang> <http://0.0.0.0:8080/dataRS#KLS_RS> <http://0.0.0.0:8080/dataRS#C> .
@@ -2901,3 +2888,146 @@
 <http://0.0.0.0:8080/dataRS#row=198> <http://www.w3.org/2000/01/rdf-schema#label> "RS Ibu dan Anak Harapan Bunda"@id-id .
 <http://0.0.0.0:8080/dataRS#row=199> <http://www.w3.org/2000/01/rdf-schema#label> "RS Umum Daerah Kota Bengkulu"@id-id .
 <http://0.0.0.0:8080/dataRS#row=200> <http://www.w3.org/2000/01/rdf-schema#label> "RS Khusus Gigi dan Mulut Palembang Provinsi Sumatera Selatan"@id-id .
+
+<http://0.0.0.0:8080/dataRS#Kemkes> <http://www.w3.org/2000/01/rdf-schema#label> "Kemkes"@id-id .
+<http://0.0.0.0:8080/dataRS#TNI_AD> <http://www.w3.org/2000/01/rdf-schema#label> "TNI AD"@id-id .
+<http://0.0.0.0:8080/dataRS#Swasta_Lainnya> <http://www.w3.org/2000/01/rdf-schema#label> "Swasta/Lainnya"@id-id .
+<http://0.0.0.0:8080/dataRS#Perusahaan> <http://www.w3.org/2000/01/rdf-schema#label> "Perusahaan"@id-id .
+<http://0.0.0.0:8080/dataRS#Pemkab> <http://www.w3.org/2000/01/rdf-schema#label> "Pemkab"@id-id .
+<http://0.0.0.0:8080/dataRS#Organisasi_Sosial> <http://www.w3.org/2000/01/rdf-schema#label> "Organisasi Sosial"@id-id .
+<http://0.0.0.0:8080/dataRS#Organisasi_Islam> <http://www.w3.org/2000/01/rdf-schema#label> "Organisasi Islam"@id-id .
+<http://0.0.0.0:8080/dataRS#Perorangan> <http://www.w3.org/2000/01/rdf-schema#label> "Perorangan"@id-id .
+<http://0.0.0.0:8080/dataRS#TNI_AU> <http://www.w3.org/2000/01/rdf-schema#label> "TNI AU"@id-id .
+<http://0.0.0.0:8080/dataRS#Pemprop> <http://www.w3.org/2000/01/rdf-schema#label> "Pemprop"@id-id .
+<http://0.0.0.0:8080/dataRS#Pemkot> <http://www.w3.org/2000/01/rdf-schema#label> "Pemkot"@id-id .
+<http://0.0.0.0:8080/dataRS#Organisasi_Hindu> <http://www.w3.org/2000/01/rdf-schema#label> "Organisasi Hindu"@id-id .
+<http://0.0.0.0:8080/dataRS#Organisasi_Protestan> <http://www.w3.org/2000/01/rdf-schema#label> "Organisasi Protestan"@id-id .
+<http://0.0.0.0:8080/dataRS#POLRI> <http://www.w3.org/2000/01/rdf-schema#label> "POLRI"@id-id .
+<http://0.0.0.0:8080/dataRS#TNI_AL> <http://www.w3.org/2000/01/rdf-schema#label> "TNI AL"@id-id .
+<http://0.0.0.0:8080/dataRS#BUMN> <http://www.w3.org/2000/01/rdf-schema#label> "BUMN"@id-id .
+<http://0.0.0.0:8080/dataRS#Kementerian_Lain> <http://www.w3.org/2000/01/rdf-schema#label> "Kementerian Lain"@id-id .
+<http://0.0.0.0:8080/dataRS#Organisasi_Katholik> <http://www.w3.org/2000/01/rdf-schema#label> "Organisasi Katholik"@id-id .
+
+<http://0.0.0.0:8080/dataRS#A> <http://www.w3.org/2000/01/rdf-schema#label> "A"@id-id .
+<http://0.0.0.0:8080/dataRS#B> <http://www.w3.org/2000/01/rdf-schema#label> "B"@id-id .
+<http://0.0.0.0:8080/dataRS#C> <http://www.w3.org/2000/01/rdf-schema#label> "C"@id-id .
+<http://0.0.0.0:8080/dataRS#D> <http://www.w3.org/2000/01/rdf-schema#label> "D"@id-id .
+<http://0.0.0.0:8080/dataRS#Belum_ditetapkan> <http://www.w3.org/2000/01/rdf-schema#label> "Belum ditetapkan"@id-id .
+
+<http://0.0.0.0:8080/dataRS#Bangka_Tengah> <http://www.w3.org/2000/01/rdf-schema#label> "Bangka Tengah"@id-id .
+<http://0.0.0.0:8080/dataRS#Gianyar> <http://www.w3.org/2000/01/rdf-schema#label> "Gianyar"@id-id .
+<http://0.0.0.0:8080/dataRS#Luwu> <http://www.w3.org/2000/01/rdf-schema#label> "Luwu"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Manado> <http://www.w3.org/2000/01/rdf-schema#label> "Manado"@id-id .
+<http://0.0.0.0:8080/dataRS#Kapuas_Hulu> <http://www.w3.org/2000/01/rdf-schema#label> "Kapuas Hulu"@id-id .
+<http://0.0.0.0:8080/dataRS#Bekasi> <http://www.w3.org/2000/01/rdf-schema#label> "Bekasi"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Palopo> <http://www.w3.org/2000/01/rdf-schema#label> "Palopo"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Padang> <http://www.w3.org/2000/01/rdf-schema#label> "Padang"@id-id .
+<http://0.0.0.0:8080/dataRS#Sidoarjo> <http://www.w3.org/2000/01/rdf-schema#label> "Sidoarjo"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Balikpapan> <http://www.w3.org/2000/01/rdf-schema#label> "Balikpapan"@id-id .
+<http://0.0.0.0:8080/dataRS#Aceh_Barat> <http://www.w3.org/2000/01/rdf-schema#label> "Aceh Barat"@id-id .
+<http://0.0.0.0:8080/dataRS#Pidie> <http://www.w3.org/2000/01/rdf-schema#label> "Pidie"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Jambi> <http://www.w3.org/2000/01/rdf-schema#label> "Jambi"@id-id .
+<http://0.0.0.0:8080/dataRS#Musi_Banyuasin> <http://www.w3.org/2000/01/rdf-schema#label> "Musi Banyuasin"@id-id .
+<http://0.0.0.0:8080/dataRS#Karimun> <http://www.w3.org/2000/01/rdf-schema#label> "Karimun"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Jakarta_Pusat> <http://www.w3.org/2000/01/rdf-schema#label> "Jakarta Pusat"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Jakarta_Barat> <http://www.w3.org/2000/01/rdf-schema#label> "Jakarta Barat"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Jakarta_Utara> <http://www.w3.org/2000/01/rdf-schema#label> "Jakarta Utara"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Depok> <http://www.w3.org/2000/01/rdf-schema#label> "Depok"@id-id .
+<http://0.0.0.0:8080/dataRS#Majalengka> <http://www.w3.org/2000/01/rdf-schema#label> "Majalengka"@id-id .
+<http://0.0.0.0:8080/dataRS#Cirebon> <http://www.w3.org/2000/01/rdf-schema#label> "Cirebon"@id-id .
+<http://0.0.0.0:8080/dataRS#Cilacap> <http://www.w3.org/2000/01/rdf-schema#label> "Cilacap"@id-id .
+<http://0.0.0.0:8080/dataRS#Batang> <http://www.w3.org/2000/01/rdf-schema#label> "Batang"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Semarang> <http://www.w3.org/2000/01/rdf-schema#label> "Semarang"@id-id .
+<http://0.0.0.0:8080/dataRS#Kulon_Progo> <http://www.w3.org/2000/01/rdf-schema#label> "Kulon Progo"@id-id .
+<http://0.0.0.0:8080/dataRS#Jember> <http://www.w3.org/2000/01/rdf-schema#label> "Jember"@id-id .
+<http://0.0.0.0:8080/dataRS#Lamongan> <http://www.w3.org/2000/01/rdf-schema#label> "Lamongan"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Malang> <http://www.w3.org/2000/01/rdf-schema#label> "Malang"@id-id .
+<http://0.0.0.0:8080/dataRS#Mojokerto> <http://www.w3.org/2000/01/rdf-schema#label> "Mojokerto"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Surabaya> <http://www.w3.org/2000/01/rdf-schema#label> "Surabaya"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Tangerang> <http://www.w3.org/2000/01/rdf-schema#label> "Tangerang"@id-id .
+<http://0.0.0.0:8080/dataRS#Barito_Utara> <http://www.w3.org/2000/01/rdf-schema#label> "Barito Utara"@id-id .
+<http://0.0.0.0:8080/dataRS#Barito_Kuala> <http://www.w3.org/2000/01/rdf-schema#label> "Barito Kuala"@id-id .
+<http://0.0.0.0:8080/dataRS#Jeneponto> <http://www.w3.org/2000/01/rdf-schema#label> "Jeneponto"@id-id .
+<http://0.0.0.0:8080/dataRS#Purwakarta> <http://www.w3.org/2000/01/rdf-schema#label> "Purwakarta"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Tangerang_Selatan> <http://www.w3.org/2000/01/rdf-schema#label> "Tangerang Selatan"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Makassar> <http://www.w3.org/2000/01/rdf-schema#label> "Makassar"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Sukabumi> <http://www.w3.org/2000/01/rdf-schema#label> "Sukabumi"@id-id .
+<http://0.0.0.0:8080/dataRS#Bantul> <http://www.w3.org/2000/01/rdf-schema#label> "Bantul"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Pontianak> <http://www.w3.org/2000/01/rdf-schema#label> "Pontianak"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Pangkal_Pinang> <http://www.w3.org/2000/01/rdf-schema#label> "Pangkal Pinang"@id-id .
+<http://0.0.0.0:8080/dataRS#Klaten> <http://www.w3.org/2000/01/rdf-schema#label> "Klaten"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Palembang> <http://www.w3.org/2000/01/rdf-schema#label> "Palembang"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Tidore_Kepulauan> <http://www.w3.org/2000/01/rdf-schema#label> "Tidore Kepulauan"@id-id .
+<http://0.0.0.0:8080/dataRS#Donggala> <http://www.w3.org/2000/01/rdf-schema#label> "Donggala"@id-id .
+<http://0.0.0.0:8080/dataRS#Boalemo> <http://www.w3.org/2000/01/rdf-schema#label> "Boalemo"@id-id .
+<http://0.0.0.0:8080/dataRS#Batang_Hari> <http://www.w3.org/2000/01/rdf-schema#label> "Batang Hari"@id-id .
+<http://0.0.0.0:8080/dataRS#Bungo> <http://www.w3.org/2000/01/rdf-schema#label> "Bungo"@id-id .
+<http://0.0.0.0:8080/dataRS#Ogan_Komering_Ulu> <http://www.w3.org/2000/01/rdf-schema#label> "Ogan Komering Ulu"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Jakarta_Timur> <http://www.w3.org/2000/01/rdf-schema#label> "Jakarta Timur"@id-id .
+<http://0.0.0.0:8080/dataRS#Karawang> <http://www.w3.org/2000/01/rdf-schema#label> "Karawang"@id-id .
+<http://0.0.0.0:8080/dataRS#Kebumen> <http://www.w3.org/2000/01/rdf-schema#label> "Kebumen"@id-id .
+<http://0.0.0.0:8080/dataRS#Magelang> <http://www.w3.org/2000/01/rdf-schema#label> "Magelang"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Surakarta> <http://www.w3.org/2000/01/rdf-schema#label> "Surakarta"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Yogyakarta> <http://www.w3.org/2000/01/rdf-schema#label> "Yogyakarta"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Denpasar> <http://www.w3.org/2000/01/rdf-schema#label> "Denpasar"@id-id .
+<http://0.0.0.0:8080/dataRS#Timor_Tengah_Selatan> <http://www.w3.org/2000/01/rdf-schema#label> "Timor Tengah Selatan"@id-id .
+<http://0.0.0.0:8080/dataRS#Berau> <http://www.w3.org/2000/01/rdf-schema#label> "Berau"@id-id .
+<http://0.0.0.0:8080/dataRS#Kolaka> <http://www.w3.org/2000/01/rdf-schema#label> "Kolaka"@id-id .
+<http://0.0.0.0:8080/dataRS#Kepulauan_Sula> <http://www.w3.org/2000/01/rdf-schema#label> "Kepulauan Sula"@id-id .
+<http://0.0.0.0:8080/dataRS#Pelalawan> <http://www.w3.org/2000/01/rdf-schema#label> "Pelalawan"@id-id .
+<http://0.0.0.0:8080/dataRS#Minahasa_Tenggara> <http://www.w3.org/2000/01/rdf-schema#label> "Minahasa Tenggara"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Bandar_Lampung> <http://www.w3.org/2000/01/rdf-schema#label> "Bandar Lampung"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Metro> <http://www.w3.org/2000/01/rdf-schema#label> "Metro"@id-id .
+<http://0.0.0.0:8080/dataRS#Tasikmalaya> <http://www.w3.org/2000/01/rdf-schema#label> "Tasikmalaya"@id-id .
+<http://0.0.0.0:8080/dataRS#Sragen> <http://www.w3.org/2000/01/rdf-schema#label> "Sragen"@id-id .
+<http://0.0.0.0:8080/dataRS#Jepara> <http://www.w3.org/2000/01/rdf-schema#label> "Jepara"@id-id .
+<http://0.0.0.0:8080/dataRS#Bogor> <http://www.w3.org/2000/01/rdf-schema#label> "Bogor"@id-id .
+<http://0.0.0.0:8080/dataRS#Subang> <http://www.w3.org/2000/01/rdf-schema#label> "Subang"@id-id .
+<http://0.0.0.0:8080/dataRS#Sigi> <http://www.w3.org/2000/01/rdf-schema#label> "Sigi"@id-id .
+<http://0.0.0.0:8080/dataRS#Garut> <http://www.w3.org/2000/01/rdf-schema#label> "Garut"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Palangka_Raya> <http://www.w3.org/2000/01/rdf-schema#label> "Palangka Raya"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Banda_Aceh> <http://www.w3.org/2000/01/rdf-schema#label> "Banda Aceh"@id-id .
+<http://0.0.0.0:8080/dataRS#Kuningan> <http://www.w3.org/2000/01/rdf-schema#label> "Kuningan"@id-id .
+<http://0.0.0.0:8080/dataRS#Ciamis> <http://www.w3.org/2000/01/rdf-schema#label> "Ciamis"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Langsa> <http://www.w3.org/2000/01/rdf-schema#label> "Langsa"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Batam> <http://www.w3.org/2000/01/rdf-schema#label> "Batam"@id-id .
+<http://0.0.0.0:8080/dataRS#Blora> <http://www.w3.org/2000/01/rdf-schema#label> "Blora"@id-id .
+<http://0.0.0.0:8080/dataRS#Pati> <http://www.w3.org/2000/01/rdf-schema#label> "Pati"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Pekalongan> <http://www.w3.org/2000/01/rdf-schema#label> "Pekalongan"@id-id .
+<http://0.0.0.0:8080/dataRS#Sleman> <http://www.w3.org/2000/01/rdf-schema#label> "Sleman"@id-id .
+<http://0.0.0.0:8080/dataRS#Nganjuk> <http://www.w3.org/2000/01/rdf-schema#label> "Nganjuk"@id-id .
+<http://0.0.0.0:8080/dataRS#Probolinggo> <http://www.w3.org/2000/01/rdf-schema#label> "Probolinggo"@id-id .
+<http://0.0.0.0:8080/dataRS#Bangli> <http://www.w3.org/2000/01/rdf-schema#label> "Bangli"@id-id .
+<http://0.0.0.0:8080/dataRS#Buleleng> <http://www.w3.org/2000/01/rdf-schema#label> "Buleleng"@id-id .
+<http://0.0.0.0:8080/dataRS#Kupang> <http://www.w3.org/2000/01/rdf-schema#label> "Kupang"@id-id .
+<http://0.0.0.0:8080/dataRS#Bengkayang> <http://www.w3.org/2000/01/rdf-schema#label> "Bengkayang"@id-id .
+<http://0.0.0.0:8080/dataRS#Sidenreng_Rappang> <http://www.w3.org/2000/01/rdf-schema#label> "Sidenreng Rappang"@id-id .
+<http://0.0.0.0:8080/dataRS#Konawe_Selatan> <http://www.w3.org/2000/01/rdf-schema#label> "Konawe Selatan"@id-id .
+<http://0.0.0.0:8080/dataRS#Halmahera_Tengah> <http://www.w3.org/2000/01/rdf-schema#label> "Halmahera Tengah"@id-id .
+<http://0.0.0.0:8080/dataRS#Gresik> <http://www.w3.org/2000/01/rdf-schema#label> "Gresik"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Medan> <http://www.w3.org/2000/01/rdf-schema#label> "Medan"@id-id .
+<http://0.0.0.0:8080/dataRS#Kepulauan_Anambas> <http://www.w3.org/2000/01/rdf-schema#label> "Kepulauan Anambas"@id-id .
+<http://0.0.0.0:8080/dataRS#Karanganyar> <http://www.w3.org/2000/01/rdf-schema#label> "Karanganyar"@id-id .
+<http://0.0.0.0:8080/dataRS#Tulang_Bawang> <http://www.w3.org/2000/01/rdf-schema#label> "Tulang Bawang"@id-id .
+<http://0.0.0.0:8080/dataRS#Rokan_Hilir> <http://www.w3.org/2000/01/rdf-schema#label> "Rokan Hilir"@id-id .
+<http://0.0.0.0:8080/dataRS#Timor_Tengah_Utara> <http://www.w3.org/2000/01/rdf-schema#label> "Timor Tengah Utara"@id-id .
+<http://0.0.0.0:8080/dataRS#Banyumas> <http://www.w3.org/2000/01/rdf-schema#label> "Banyumas"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Pekanbaru> <http://www.w3.org/2000/01/rdf-schema#label> "Pekanbaru"@id-id .
+<http://0.0.0.0:8080/dataRS#Tanjung_Jabung_Barat> <http://www.w3.org/2000/01/rdf-schema#label> "Tanjung Jabung Barat"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Tegal> <http://www.w3.org/2000/01/rdf-schema#label> "Tegal"@id-id .
+<http://0.0.0.0:8080/dataRS#Ketapang> <http://www.w3.org/2000/01/rdf-schema#label> "Ketapang"@id-id .
+<http://0.0.0.0:8080/dataRS#Mamuju> <http://www.w3.org/2000/01/rdf-schema#label> "Mamuju"@id-id .
+<http://0.0.0.0:8080/dataRS#Seram_Bagian_Timur> <http://www.w3.org/2000/01/rdf-schema#label> "Seram Bagian Timur"@id-id .
+<http://0.0.0.0:8080/dataRS#Padang_Lawas> <http://www.w3.org/2000/01/rdf-schema#label> "Padang Lawas"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Pagar_Alam> <http://www.w3.org/2000/01/rdf-schema#label> "Pagar Alam"@id-id .
+<http://0.0.0.0:8080/dataRS#Tanggamus> <http://www.w3.org/2000/01/rdf-schema#label> "Tanggamus"@id-id .
+<http://0.0.0.0:8080/dataRS#Ogan_Ilir> <http://www.w3.org/2000/01/rdf-schema#label> "Ogan Ilir"@id-id .
+<http://0.0.0.0:8080/dataRS#Brebes> <http://www.w3.org/2000/01/rdf-schema#label> "Brebes"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Batu> <http://www.w3.org/2000/01/rdf-schema#label> "Batu"@id-id .
+<http://0.0.0.0:8080/dataRS#Lebak> <http://www.w3.org/2000/01/rdf-schema#label> "Lebak"@id-id .
+<http://0.0.0.0:8080/dataRS#Sukamara> <http://www.w3.org/2000/01/rdf-schema#label> "Sukamara"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Banjarmasin> <http://www.w3.org/2000/01/rdf-schema#label> "Banjarmasin"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Gorontalo> <http://www.w3.org/2000/01/rdf-schema#label> "Gorontalo"@id-id .
+<http://0.0.0.0:8080/dataRS#Wonogiri> <http://www.w3.org/2000/01/rdf-schema#label> "Wonogiri"@id-id .
+<http://0.0.0.0:8080/dataRS#Kudus> <http://www.w3.org/2000/01/rdf-schema#label> "Kudus"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Bengkulu> <http://www.w3.org/2000/01/rdf-schema#label> "Bengkulu"@id-id .
