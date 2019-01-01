@@ -13,8 +13,7 @@ def get_query(file_name, query):
 
 def test(result):
     for row in result:
-        for x in row:
-            print ("{}: {}".format(x, row[x]))
+        print(result[row])
 
 
 def query_list_all_rs(provinsi):
@@ -24,12 +23,12 @@ SELECT ?province WHERE {
 ?province <http://www.wikidata.org/prop/direct/P31> <http://www.wikidata.org/entity/Q5098> .
 ?province <http://www.w3.org/2000/01/rdf-schema#label> \"""" + provinsi + """\"@id.}
     """
-    r = requests.get(url, params = {'format': 'json', 'query': query})
+    r = requests.get(url, params={'format': 'json', 'query': query})
     data = r.json()
     for item in data['results']['bindings']:
         provinsi_link.append(item['province']['value'])
 
-    file_name = '../static/data/data-rs-all.nt'
+    file_name = 'static/data/data-rs-all.nt'
     query = """
     SELECT ?hospital_label ?hospital WHERE {
     ?row <http://0.0.0.0:8080/dataRS#NAMA_RS> ?hospital.
@@ -52,7 +51,7 @@ SELECT DISTINCT ?hospital_label ?rs WHERE {
 ?rs <http://www.wikidata.org/prop/direct/P131> ?region.
 ?region <http://www.wikidata.org/prop/direct/P131> <""" + provinsi_link[0] + """> . }
     """
-    r = requests.get(url, params = {'format': 'json', 'query': query})
+    r = requests.get(url, params={'format': 'json', 'query': query})
     data = r.json()
     for item in data['results']['bindings']:
         d = {}
@@ -69,7 +68,7 @@ SELECT ?province_label ?province WHERE {
 ?province <http://www.w3.org/2000/01/rdf-schema#label> ?province_label.
 filter(lang(?province_label) = 'id')}
     """
-    r = requests.get(url, params = {'format': 'json', 'query': query})
+    r = requests.get(url, params={'format': 'json', 'query': query})
     data = r.json()
     list_of_dict = []
     for item in data['results']['bindings']:
@@ -87,12 +86,12 @@ SELECT ?province WHERE {
 ?province <http://www.wikidata.org/prop/direct/P31> <http://www.wikidata.org/entity/Q5098> .
 ?province <http://www.w3.org/2000/01/rdf-schema#label> \"""" + provinsi + """\"@id.}
     """
-    r = requests.get(url, params = {'format': 'json', 'query': query})
+    r = requests.get(url, params={'format': 'json', 'query': query})
     data = r.json()
     for item in data['results']['bindings']:
         provinsi_link.append(item['province']['value'])
 
-    file_name = '../static/data/data-rs-all.nt'
+    file_name = 'static/data/data-rs-all.nt'
     query = """
     SELECT ?pengelola ?pengelola_label (count(?hospital) as ?count) WHERE {
     ?row <http://0.0.0.0:8080/dataRS#NAMA_RS> ?hospital.
@@ -101,7 +100,7 @@ SELECT ?province WHERE {
     ?hospital <http://0.0.0.0:8080/dataRS#KAB_KOTA> ?region.
     ?region <http://www.wikidata.org/prop/direct/P131> <""" + provinsi_link[0] + """>.
     } GROUP BY ?pengelola"""
-    
+
     result = get_query(file_name, query)
     list_of_dict = []
     for row in result:
@@ -120,12 +119,12 @@ SELECT ?province WHERE {
 ?province <http://www.wikidata.org/prop/direct/P31> <http://www.wikidata.org/entity/Q5098> .
 ?province <http://www.w3.org/2000/01/rdf-schema#label> \"""" + provinsi + """\"@id.}
     """
-    r = requests.get(url, params = {'format': 'json', 'query': query})
+    r = requests.get(url, params={'format': 'json', 'query': query})
     data = r.json()
     for item in data['results']['bindings']:
         provinsi_link.append(item['province']['value'])
 
-    file_name = '../static/data/data-rs-all.nt'
+    file_name = 'static/data/data-rs-all.nt'
     query = """
     SELECT ?class ?class_label (count(?hospital) as ?count) WHERE {
     ?row <http://0.0.0.0:8080/dataRS#NAMA_RS> ?hospital.
@@ -134,7 +133,7 @@ SELECT ?province WHERE {
     ?hospital <http://0.0.0.0:8080/dataRS#KAB_KOTA> ?region.
     ?region <http://www.wikidata.org/prop/direct/P131> <""" + provinsi_link[0] + """>.
     } GROUP BY ?class"""
-    
+
     result = get_query(file_name, query)
     list_of_dict = []
     for row in result:
@@ -153,7 +152,7 @@ SELECT ?province WHERE {
 ?province <http://www.wikidata.org/prop/direct/P31> <http://www.wikidata.org/entity/Q5098> .
 ?province <http://www.w3.org/2000/01/rdf-schema#label> \"""" + provinsi + """\"@id.}
     """
-    r = requests.get(url, params = {'format': 'json', 'query': query})
+    r = requests.get(url, params={'format': 'json', 'query': query})
     data = r.json()
     for item in data['results']['bindings']:
         provinsi_link.append(item['province']['value'])
@@ -168,7 +167,7 @@ SELECT ?province WHERE {
     ?hospital <http://0.0.0.0:8080/dataRS#KAB_KOTA> ?region.
     ?region <http://www.wikidata.org/prop/direct/P131> <""" + provinsi_link[0] + """>.
     }"""
-    
+
     result = get_query(file_name, query)
     list_of_dict = []
     for row in result:
@@ -186,7 +185,7 @@ SELECT ?province WHERE {
 ?province <http://www.wikidata.org/prop/direct/P31> <http://www.wikidata.org/entity/Q5098> .
 ?province <http://www.w3.org/2000/01/rdf-schema#label> \"""" + provinsi + """\"@id.}
     """
-    r = requests.get(url, params = {'format': 'json', 'query': query})
+    r = requests.get(url, params={'format': 'json', 'query': query})
     data = r.json()
     for item in data['results']['bindings']:
         provinsi_link.append(item['province']['value'])
@@ -227,7 +226,7 @@ SELECT DISTINCT ?hospital_label ?rs WHERE {
 ?rs <http://www.wikidata.org/prop/direct/P131> ?region.
 ?region <http://www.wikidata.org/prop/direct/P131> <""" + provinsi_link[0] + """> . }
     """
-    r = requests.get(url, params = {'format': 'json', 'query': query})
+    r = requests.get(url, params={'format': 'json', 'query': query})
     data = r.json()
     for item in data['results']['bindings']:
         d = {}
@@ -300,7 +299,7 @@ SELECT ?province WHERE {
 ?province <http://www.wikidata.org/prop/direct/P31> <http://www.wikidata.org/entity/Q5098> .
 ?province <http://www.w3.org/2000/01/rdf-schema#label> \"""" + provinsi + """\"@id.}
     """
-    r = requests.get(url, params = {'format': 'json', 'query': query})
+    r = requests.get(url, params={'format': 'json', 'query': query})
     data = r.json()
     for item in data['results']['bindings']:
         provinsi_link.append(item['province']['value'])
@@ -314,7 +313,7 @@ SELECT ?province WHERE {
     ?hospital <http://0.0.0.0:8080/dataRS#KAB_KOTA> ?region.
     ?region <http://www.wikidata.org/prop/direct/P131> <""" + provinsi_link[0] + """>.
     }"""
-    
+
     result = get_query(file_name, query)
     list_of_dict = []
     for row in result:
@@ -332,7 +331,7 @@ SELECT ?province WHERE {
 ?province <http://www.wikidata.org/prop/direct/P31> <http://www.wikidata.org/entity/Q5098> .
 ?province <http://www.w3.org/2000/01/rdf-schema#label> \"""" + provinsi + """\"@id.}
     """
-    r = requests.get(url, params = {'format': 'json', 'query': query})
+    r = requests.get(url, params={'format': 'json', 'query': query})
     data = r.json()
     for item in data['results']['bindings']:
         provinsi_link.append(item['province']['value'])
@@ -347,7 +346,7 @@ SELECT ?province WHERE {
     ?hospital <http://0.0.0.0:8080/dataRS#KAB_KOTA> ?region.
     ?region <http://www.wikidata.org/prop/direct/P131> <""" + provinsi_link[0] + """>.
     }"""
-    
+
     result = get_query(file_name, query)
     list_of_dict = []
     for row in result:

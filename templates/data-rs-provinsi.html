@@ -4,8 +4,8 @@
 		<!--Import Google Icon Font-->
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<!--Import materialize.css-->
-		<link type="text/css" rel="stylesheet" href="../static/css/materialize.min.css" media="screen,projection" />
-		<link rel="stylesheet" type="text/css" href="../static/css/app-css.css">
+		<link type="text/css" rel="stylesheet" href="/static/css/materialize.min.css" media="screen,projection" />
+		<link rel="stylesheet" type="text/css" href="/static/css/app-css.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<!--Let browser know website is optimized for mobile-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -109,21 +109,25 @@
 				</div>
 			</div> -->
 		</div>
-		
-		
-		<div class="row"></div>
-		<div class="row"></div>
-		<div class="center-align">
-			<form class="form-inline" action="data-rs/{{provinsi}}">
-				<button class="waves-effect pink darken-2 btn">Lihat Daftar Rumah Sakit</button>
-			</form>
+		<!-- tipe pengelola -->
+		<div class="container">
+      <!-- return table pengelola--> {{tabel_pengelola | safe}}
+		</div>
+		<!-- tipe kelas -->
+		<div class="container">
+			{{tabel_tipe_kelas | safe}}
+		</div>
+		<div class="row">
+      <form class="form-inline" action="data-rs/{{provinsi}}">
+  			<button class="waves-effect pink darken-2 btn">Lihat Daftar Rumah Sakit</button>
+      </form>
 		</div>
 		<script type="text/javascript" src="../static/js/materialize.min.js"></script>
 		<script src ="../static/js/materialize.min.jquery.js"></script>
 		<script type="text/javascript">
 			// $(document).ready(function(){
-			// 	$("#tabs-swipe").tabs({ 
-			// 		swipeable: true, 
+			// 	$("#tabs-swipe").tabs({
+			// 		swipeable: true,
 			// 		responsiveThreshold : Infinity
 			// 	});
 			// });
@@ -131,7 +135,7 @@
 				var tabel_pengelola = {{ tabel_pengelola }}
 				document.getElementById("content").innerHTML = tabel_pengelola;
 			}
-			
+
 			function loadTipeKelas() {
 				var tabel_tipe_kelas = {{ tabel_tipe_kelas }}
 				document.getElementById("content").innerHTML = tabel_tipe_kelas;

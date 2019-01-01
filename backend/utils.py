@@ -40,11 +40,11 @@ from backend.rdf import *
 
 def build_tabel(*kolom):
     data = kolom[-1]
-    tabel = '<table><tr>'
+    tabel = '<table class="highlight"><thead><tr>'
     for i in kolom:
         if i != data:
             tabel += '<th>%s</th>' % i
-    tabel += '</tr>'
+    tabel += '</tr></thead><tbody>'
     for row in data:
         # print(row)
         tabel += '<tr>'
@@ -52,8 +52,11 @@ def build_tabel(*kolom):
             # print(i + '\n')
             tabel += '<th>%s</th>' % i
         tabel += '</tr>'
-    tabel += '</tabel>'
-    print(tabel)
+    tabel += '</tbody></table>'
+    # formatted = """<table></table>"""
+    # print(tabel)
+    # print(type(formatted))
+    return tabel
 
 
 def get_seluruh_provinsi():
@@ -68,7 +71,7 @@ def get_seluruh_provinsi():
 
 def get_seluruh_rs(provinsi):
     list_rs = query_list_all_rs(provinsi)
-    print(list_rs)
+    # print(list_rs)
     return list_rs
 
 #
@@ -105,7 +108,8 @@ def get_rs_pengelola(pengelola, provinsi):
 
 def get_tabel_rs(provinsi):
     data = query_rs(provinsi)
-    tabel = build_tabel('Nama', 'Tipe', 'Kelas', 'Pengelola', 'Wilayah', 'Kota/Kabupaten', data)
+    tabel = build_tabel('Nama', 'Tipe', 'Kelas', 'Pengelola',
+                        'Wilayah', 'Kota/Kabupaten', data)
     return tabel
 
 
@@ -131,8 +135,8 @@ def get_tabel_kelas_rs(kelas_rs, provinsi):
 #     tabel = build_tabel('Nama RS', data)
 #     jumlah_kamar = len(data)
 #     return (jumlah_kamar, tabel)
-# 
-# 
+#
+#
 # def get_detail_puskesmas(puskesmas):
 #     data = query_detail_puskesmas(puskesmas)
 #     return data
