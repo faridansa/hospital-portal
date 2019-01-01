@@ -2913,3 +2913,121 @@
 <http://0.0.0.0:8080/dataRS#C> <http://www.w3.org/2000/01/rdf-schema#label> "C"@id-id .
 <http://0.0.0.0:8080/dataRS#D> <http://www.w3.org/2000/01/rdf-schema#label> "D"@id-id .
 <http://0.0.0.0:8080/dataRS#Belum_ditetapkan> <http://www.w3.org/2000/01/rdf-schema#label> "Belum ditetapkan"@id-id .
+
+<http://0.0.0.0:8080/dataRS#Bangka_Tengah> <http://www.w3.org/2000/01/rdf-schema#label> "Bangka Tengah"@id-id .
+<http://0.0.0.0:8080/dataRS#Gianyar> <http://www.w3.org/2000/01/rdf-schema#label> "Gianyar"@id-id .
+<http://0.0.0.0:8080/dataRS#Luwu> <http://www.w3.org/2000/01/rdf-schema#label> "Luwu"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Manado> <http://www.w3.org/2000/01/rdf-schema#label> "Manado"@id-id .
+<http://0.0.0.0:8080/dataRS#Kapuas_Hulu> <http://www.w3.org/2000/01/rdf-schema#label> "Kapuas Hulu"@id-id .
+<http://0.0.0.0:8080/dataRS#Bekasi> <http://www.w3.org/2000/01/rdf-schema#label> "Bekasi"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Palopo> <http://www.w3.org/2000/01/rdf-schema#label> "Palopo"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Padang> <http://www.w3.org/2000/01/rdf-schema#label> "Padang"@id-id .
+<http://0.0.0.0:8080/dataRS#Sidoarjo> <http://www.w3.org/2000/01/rdf-schema#label> "Sidoarjo"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Balikpapan> <http://www.w3.org/2000/01/rdf-schema#label> "Balikpapan"@id-id .
+<http://0.0.0.0:8080/dataRS#Aceh_Barat> <http://www.w3.org/2000/01/rdf-schema#label> "Aceh Barat"@id-id .
+<http://0.0.0.0:8080/dataRS#Pidie> <http://www.w3.org/2000/01/rdf-schema#label> "Pidie"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Jambi> <http://www.w3.org/2000/01/rdf-schema#label> "Jambi"@id-id .
+<http://0.0.0.0:8080/dataRS#Musi_Banyuasin> <http://www.w3.org/2000/01/rdf-schema#label> "Musi Banyuasin"@id-id .
+<http://0.0.0.0:8080/dataRS#Karimun> <http://www.w3.org/2000/01/rdf-schema#label> "Karimun"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Jakarta_Pusat> <http://www.w3.org/2000/01/rdf-schema#label> "Jakarta Pusat"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Jakarta_Barat> <http://www.w3.org/2000/01/rdf-schema#label> "Jakarta Barat"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Jakarta_Utara> <http://www.w3.org/2000/01/rdf-schema#label> "Jakarta Utara"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Depok> <http://www.w3.org/2000/01/rdf-schema#label> "Depok"@id-id .
+<http://0.0.0.0:8080/dataRS#Majalengka> <http://www.w3.org/2000/01/rdf-schema#label> "Majalengka"@id-id .
+<http://0.0.0.0:8080/dataRS#Cirebon> <http://www.w3.org/2000/01/rdf-schema#label> "Cirebon"@id-id .
+<http://0.0.0.0:8080/dataRS#Cilacap> <http://www.w3.org/2000/01/rdf-schema#label> "Cilacap"@id-id .
+<http://0.0.0.0:8080/dataRS#Batang> <http://www.w3.org/2000/01/rdf-schema#label> "Batang"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Semarang> <http://www.w3.org/2000/01/rdf-schema#label> "Semarang"@id-id .
+<http://0.0.0.0:8080/dataRS#Kulon_Progo> <http://www.w3.org/2000/01/rdf-schema#label> "Kulon Progo"@id-id .
+<http://0.0.0.0:8080/dataRS#Jember> <http://www.w3.org/2000/01/rdf-schema#label> "Jember"@id-id .
+<http://0.0.0.0:8080/dataRS#Lamongan> <http://www.w3.org/2000/01/rdf-schema#label> "Lamongan"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Malang> <http://www.w3.org/2000/01/rdf-schema#label> "Malang"@id-id .
+<http://0.0.0.0:8080/dataRS#Mojokerto> <http://www.w3.org/2000/01/rdf-schema#label> "Mojokerto"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Surabaya> <http://www.w3.org/2000/01/rdf-schema#label> "Surabaya"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Tangerang> <http://www.w3.org/2000/01/rdf-schema#label> "Tangerang"@id-id .
+<http://0.0.0.0:8080/dataRS#Barito_Utara> <http://www.w3.org/2000/01/rdf-schema#label> "Barito Utara"@id-id .
+<http://0.0.0.0:8080/dataRS#Barito_Kuala> <http://www.w3.org/2000/01/rdf-schema#label> "Barito Kuala"@id-id .
+<http://0.0.0.0:8080/dataRS#Jeneponto> <http://www.w3.org/2000/01/rdf-schema#label> "Jeneponto"@id-id .
+<http://0.0.0.0:8080/dataRS#Purwakarta> <http://www.w3.org/2000/01/rdf-schema#label> "Purwakarta"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Tangerang_Selatan> <http://www.w3.org/2000/01/rdf-schema#label> "Tangerang Selatan"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Makassar> <http://www.w3.org/2000/01/rdf-schema#label> "Makassar"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Sukabumi> <http://www.w3.org/2000/01/rdf-schema#label> "Sukabumi"@id-id .
+<http://0.0.0.0:8080/dataRS#Bantul> <http://www.w3.org/2000/01/rdf-schema#label> "Bantul"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Pontianak> <http://www.w3.org/2000/01/rdf-schema#label> "Pontianak"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Pangkal_Pinang> <http://www.w3.org/2000/01/rdf-schema#label> "Pangkal Pinang"@id-id .
+<http://0.0.0.0:8080/dataRS#Klaten> <http://www.w3.org/2000/01/rdf-schema#label> "Klaten"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Palembang> <http://www.w3.org/2000/01/rdf-schema#label> "Palembang"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Tidore_Kepulauan> <http://www.w3.org/2000/01/rdf-schema#label> "Tidore Kepulauan"@id-id .
+<http://0.0.0.0:8080/dataRS#Donggala> <http://www.w3.org/2000/01/rdf-schema#label> "Donggala"@id-id .
+<http://0.0.0.0:8080/dataRS#Boalemo> <http://www.w3.org/2000/01/rdf-schema#label> "Boalemo"@id-id .
+<http://0.0.0.0:8080/dataRS#Batang_Hari> <http://www.w3.org/2000/01/rdf-schema#label> "Batang Hari"@id-id .
+<http://0.0.0.0:8080/dataRS#Bungo> <http://www.w3.org/2000/01/rdf-schema#label> "Bungo"@id-id .
+<http://0.0.0.0:8080/dataRS#Ogan_Komering_Ulu> <http://www.w3.org/2000/01/rdf-schema#label> "Ogan Komering Ulu"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Jakarta_Timur> <http://www.w3.org/2000/01/rdf-schema#label> "Jakarta Timur"@id-id .
+<http://0.0.0.0:8080/dataRS#Karawang> <http://www.w3.org/2000/01/rdf-schema#label> "Karawang"@id-id .
+<http://0.0.0.0:8080/dataRS#Kebumen> <http://www.w3.org/2000/01/rdf-schema#label> "Kebumen"@id-id .
+<http://0.0.0.0:8080/dataRS#Magelang> <http://www.w3.org/2000/01/rdf-schema#label> "Magelang"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Surakarta> <http://www.w3.org/2000/01/rdf-schema#label> "Surakarta"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Yogyakarta> <http://www.w3.org/2000/01/rdf-schema#label> "Yogyakarta"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Denpasar> <http://www.w3.org/2000/01/rdf-schema#label> "Denpasar"@id-id .
+<http://0.0.0.0:8080/dataRS#Timor_Tengah_Selatan> <http://www.w3.org/2000/01/rdf-schema#label> "Timor Tengah Selatan"@id-id .
+<http://0.0.0.0:8080/dataRS#Berau> <http://www.w3.org/2000/01/rdf-schema#label> "Berau"@id-id .
+<http://0.0.0.0:8080/dataRS#Kolaka> <http://www.w3.org/2000/01/rdf-schema#label> "Kolaka"@id-id .
+<http://0.0.0.0:8080/dataRS#Kepulauan_Sula> <http://www.w3.org/2000/01/rdf-schema#label> "Kepulauan Sula"@id-id .
+<http://0.0.0.0:8080/dataRS#Pelalawan> <http://www.w3.org/2000/01/rdf-schema#label> "Pelalawan"@id-id .
+<http://0.0.0.0:8080/dataRS#Minahasa_Tenggara> <http://www.w3.org/2000/01/rdf-schema#label> "Minahasa Tenggara"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Bandar_Lampung> <http://www.w3.org/2000/01/rdf-schema#label> "Bandar Lampung"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Metro> <http://www.w3.org/2000/01/rdf-schema#label> "Metro"@id-id .
+<http://0.0.0.0:8080/dataRS#Tasikmalaya> <http://www.w3.org/2000/01/rdf-schema#label> "Tasikmalaya"@id-id .
+<http://0.0.0.0:8080/dataRS#Sragen> <http://www.w3.org/2000/01/rdf-schema#label> "Sragen"@id-id .
+<http://0.0.0.0:8080/dataRS#Jepara> <http://www.w3.org/2000/01/rdf-schema#label> "Jepara"@id-id .
+<http://0.0.0.0:8080/dataRS#Bogor> <http://www.w3.org/2000/01/rdf-schema#label> "Bogor"@id-id .
+<http://0.0.0.0:8080/dataRS#Subang> <http://www.w3.org/2000/01/rdf-schema#label> "Subang"@id-id .
+<http://0.0.0.0:8080/dataRS#Sigi> <http://www.w3.org/2000/01/rdf-schema#label> "Sigi"@id-id .
+<http://0.0.0.0:8080/dataRS#Garut> <http://www.w3.org/2000/01/rdf-schema#label> "Garut"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Palangka_Raya> <http://www.w3.org/2000/01/rdf-schema#label> "Palangka Raya"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Banda_Aceh> <http://www.w3.org/2000/01/rdf-schema#label> "Banda Aceh"@id-id .
+<http://0.0.0.0:8080/dataRS#Kuningan> <http://www.w3.org/2000/01/rdf-schema#label> "Kuningan"@id-id .
+<http://0.0.0.0:8080/dataRS#Ciamis> <http://www.w3.org/2000/01/rdf-schema#label> "Ciamis"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Langsa> <http://www.w3.org/2000/01/rdf-schema#label> "Langsa"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Batam> <http://www.w3.org/2000/01/rdf-schema#label> "Batam"@id-id .
+<http://0.0.0.0:8080/dataRS#Blora> <http://www.w3.org/2000/01/rdf-schema#label> "Blora"@id-id .
+<http://0.0.0.0:8080/dataRS#Pati> <http://www.w3.org/2000/01/rdf-schema#label> "Pati"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Pekalongan> <http://www.w3.org/2000/01/rdf-schema#label> "Pekalongan"@id-id .
+<http://0.0.0.0:8080/dataRS#Sleman> <http://www.w3.org/2000/01/rdf-schema#label> "Sleman"@id-id .
+<http://0.0.0.0:8080/dataRS#Nganjuk> <http://www.w3.org/2000/01/rdf-schema#label> "Nganjuk"@id-id .
+<http://0.0.0.0:8080/dataRS#Probolinggo> <http://www.w3.org/2000/01/rdf-schema#label> "Probolinggo"@id-id .
+<http://0.0.0.0:8080/dataRS#Bangli> <http://www.w3.org/2000/01/rdf-schema#label> "Bangli"@id-id .
+<http://0.0.0.0:8080/dataRS#Buleleng> <http://www.w3.org/2000/01/rdf-schema#label> "Buleleng"@id-id .
+<http://0.0.0.0:8080/dataRS#Kupang> <http://www.w3.org/2000/01/rdf-schema#label> "Kupang"@id-id .
+<http://0.0.0.0:8080/dataRS#Bengkayang> <http://www.w3.org/2000/01/rdf-schema#label> "Bengkayang"@id-id .
+<http://0.0.0.0:8080/dataRS#Sidenreng_Rappang> <http://www.w3.org/2000/01/rdf-schema#label> "Sidenreng Rappang"@id-id .
+<http://0.0.0.0:8080/dataRS#Konawe_Selatan> <http://www.w3.org/2000/01/rdf-schema#label> "Konawe Selatan"@id-id .
+<http://0.0.0.0:8080/dataRS#Halmahera_Tengah> <http://www.w3.org/2000/01/rdf-schema#label> "Halmahera Tengah"@id-id .
+<http://0.0.0.0:8080/dataRS#Gresik> <http://www.w3.org/2000/01/rdf-schema#label> "Gresik"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Medan> <http://www.w3.org/2000/01/rdf-schema#label> "Medan"@id-id .
+<http://0.0.0.0:8080/dataRS#Kepulauan_Anambas> <http://www.w3.org/2000/01/rdf-schema#label> "Kepulauan Anambas"@id-id .
+<http://0.0.0.0:8080/dataRS#Karanganyar> <http://www.w3.org/2000/01/rdf-schema#label> "Karanganyar"@id-id .
+<http://0.0.0.0:8080/dataRS#Tulang_Bawang> <http://www.w3.org/2000/01/rdf-schema#label> "Tulang Bawang"@id-id .
+<http://0.0.0.0:8080/dataRS#Rokan_Hilir> <http://www.w3.org/2000/01/rdf-schema#label> "Rokan Hilir"@id-id .
+<http://0.0.0.0:8080/dataRS#Timor_Tengah_Utara> <http://www.w3.org/2000/01/rdf-schema#label> "Timor Tengah Utara"@id-id .
+<http://0.0.0.0:8080/dataRS#Banyumas> <http://www.w3.org/2000/01/rdf-schema#label> "Banyumas"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Pekanbaru> <http://www.w3.org/2000/01/rdf-schema#label> "Pekanbaru"@id-id .
+<http://0.0.0.0:8080/dataRS#Tanjung_Jabung_Barat> <http://www.w3.org/2000/01/rdf-schema#label> "Tanjung Jabung Barat"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Tegal> <http://www.w3.org/2000/01/rdf-schema#label> "Tegal"@id-id .
+<http://0.0.0.0:8080/dataRS#Ketapang> <http://www.w3.org/2000/01/rdf-schema#label> "Ketapang"@id-id .
+<http://0.0.0.0:8080/dataRS#Mamuju> <http://www.w3.org/2000/01/rdf-schema#label> "Mamuju"@id-id .
+<http://0.0.0.0:8080/dataRS#Seram_Bagian_Timur> <http://www.w3.org/2000/01/rdf-schema#label> "Seram Bagian Timur"@id-id .
+<http://0.0.0.0:8080/dataRS#Padang_Lawas> <http://www.w3.org/2000/01/rdf-schema#label> "Padang Lawas"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Pagar_Alam> <http://www.w3.org/2000/01/rdf-schema#label> "Pagar Alam"@id-id .
+<http://0.0.0.0:8080/dataRS#Tanggamus> <http://www.w3.org/2000/01/rdf-schema#label> "Tanggamus"@id-id .
+<http://0.0.0.0:8080/dataRS#Ogan_Ilir> <http://www.w3.org/2000/01/rdf-schema#label> "Ogan Ilir"@id-id .
+<http://0.0.0.0:8080/dataRS#Brebes> <http://www.w3.org/2000/01/rdf-schema#label> "Brebes"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Batu> <http://www.w3.org/2000/01/rdf-schema#label> "Batu"@id-id .
+<http://0.0.0.0:8080/dataRS#Lebak> <http://www.w3.org/2000/01/rdf-schema#label> "Lebak"@id-id .
+<http://0.0.0.0:8080/dataRS#Sukamara> <http://www.w3.org/2000/01/rdf-schema#label> "Sukamara"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Banjarmasin> <http://www.w3.org/2000/01/rdf-schema#label> "Banjarmasin"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Gorontalo> <http://www.w3.org/2000/01/rdf-schema#label> "Gorontalo"@id-id .
+<http://0.0.0.0:8080/dataRS#Wonogiri> <http://www.w3.org/2000/01/rdf-schema#label> "Wonogiri"@id-id .
+<http://0.0.0.0:8080/dataRS#Kudus> <http://www.w3.org/2000/01/rdf-schema#label> "Kudus"@id-id .
+<http://0.0.0.0:8080/dataRS#Kota_Bengkulu> <http://www.w3.org/2000/01/rdf-schema#label> "Bengkulu"@id-id .

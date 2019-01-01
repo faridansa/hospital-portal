@@ -179,10 +179,11 @@ SELECT ?province WHERE {
 
     file_name = '../static/data/data-rs-all.nt'
     query = """
-    SELECT ?hospital ?hospital_label ?type ?class ?class_label ?pengelola ?pengelola_label ?region WHERE {
+    SELECT ?hospital ?hospital_label ?type ?class ?class_label ?pengelola ?pengelola_label ?region ?region_label WHERE {
     ?row <http://0.0.0.0:8080/dataRS#NAMA_RS> ?hospital.
     ?row <http://www.w3.org/2000/01/rdf-schema#label> ?hospital_label.
     ?hospital <http://0.0.0.0:8080/dataRS#KAB_KOTA> ?region.
+    ?region <http://www.w3.org/2000/01/rdf-schema#label> ?region_label .
     ?region <http://www.wikidata.org/prop/direct/P131> <""" + provinsi_link[0] + """>.
     ?hospital <http://0.0.0.0:8080/dataRS#JENIS_RS> ?type .
     ?hospital <http://0.0.0.0:8080/dataRS#KLS_RS> ?class .
@@ -202,6 +203,7 @@ SELECT ?province WHERE {
         d[iri]['pengelola_iri'] = str(row.asdict()['pengelola'].toPython())
         d[iri]['pengelola_name'] = str(row.asdict()['pengelola_label'].toPython())
         d[iri]['region_iri'] = str(row.asdict()['region'].toPython())
+        d[iri]['region_name'] = str(row.asdict()['region_label'].toPython())
 
     query = """
 SELECT DISTINCT ?hospital_label ?rs WHERE {
@@ -228,12 +230,13 @@ SELECT DISTINCT ?hospital_label ?rs WHERE {
 def query_detail_rs(rumah_sakit):
     file_name = '../static/data/data-rs-all.nt'
     query = """
-    SELECT ?type_label ?address_label ?region ?post_label ?phone_label ?fax_label
+    SELECT ?type_label ?address_label ?region ?region_label ?post_label ?phone_label ?fax_label
     ?direktur_label ?class ?class_label ?pengelola ?pengelola_label WHERE {
     ?row <http://0.0.0.0:8080/dataRS#NAMA_RS> ?hospital.
     ?row <http://www.w3.org/2000/01/rdf-schema#label> \"""" + rumah_sakit + """\"@id-id .
     ?hospital <http://0.0.0.0:8080/dataRS#ALAMAT> ?address_label .
     ?hospital <http://0.0.0.0:8080/dataRS#KAB_KOTA> ?region.
+    ?region <http://www.w3.org/2000/01/rdf-schema#label> ?region_label.
     ?hospital <http://0.0.0.0:8080/dataRS#DIREKTUR> ?direktur_label .
     ?hospital <http://0.0.0.0:8080/dataRS#JENIS_RS> ?type_label .
     ?hospital <http://0.0.0.0:8080/dataRS#KLS_RS> ?class .
@@ -249,6 +252,7 @@ def query_detail_rs(rumah_sakit):
         d['type_name'] = str(row.asdict()['type_label'].toPython())
         d['address_name'] = str(row.asdict()['address_label'].toPython())
         d['region_iri'] = str(row.asdict()['region'].toPython())
+        d['region_name'] = str(row.asdict()['region_label'].toPython())
         d['direktur_name'] = str(row.asdict()['direktur_label'].toPython())
         d['class_iri'] = str(row.asdict()['class'].toPython())
         d['class_name'] = str(row.asdict()['class_label'].toPython())
@@ -330,6 +334,6 @@ SELECT ?province WHERE {
 
 
 if __name__ == '__main__':
-    res = query_detail_rs("RS Umum Daerah Bergerak Jemaja")
+    res = query_rs("Daerah Khusus Ibukota Jakarta")
     # if you want to see the result
     test(res)
