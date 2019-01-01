@@ -11,7 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<style type="text/css">
 			table.highlight > tbody > tr:hover {
-  				background-color: rgba(244, 143, 177, 0.5);
+  				background-color: rgba(248, 187, 208, 0.3);
 			}
 		</style>
 	</head>
@@ -20,35 +20,43 @@
 		<h3 class="center-align">Daftar RS di Provinsi {{ provinsi }}</h3>
 		<div class="row">
 			<div class="col s12">
-				<ul class="tabs" id="tabs-swipe">
-					<li class="tab col s6"><a class="active" href="#" onclick="loadPengelola()">Pengelola</a></li>
-					<li class="tab col s6"><a href="#" onclick="loadTipeKelas()";return false;>Tipe Kelas</a></li>
+				<ul class="tabs" id="tabs-data">
+					<li class="tab col s6"><a class="active" id="one" onclick="pengelola()">Pengelola</a></li>
+					<li class="tab col s6"><a onclick="tipe_kelas()">Tipe Kelas</a></li>
 				</ul>
 			</div>
-			<div id="content">
+			<div id="first-tab">
 				<div class="container">
-		      <!-- return table --> {{tabel_pengelola | safe}}
-					{{tabel_tipe_kelas  | safe}}
+					<!-- return table --> 
+					{{tabel_pengelola | safe}}
 				</div>
-		<div class="row">
-      <form class="form-inline" action="/data-rs/{{provinsi}}">
-  			<button class="waves-effect pink darken-2 btn">Lihat Daftar Rumah Sakit</button>
-      </form>
+			</div>
+			<div id="second-tab">
+				<div class="container">
+					<!-- return table --> 
+					{{tabel_tipe_kelas | safe}}
+				</div>
+			</div>
+			<div class="row"></div>
+			<div class="row"></div>
+			<div class="center-align">
+				<form class="form-inline" action="data-rs/{{provinsi}}">
+					<button class="waves-effect pink darken-2 btn">Lihat Daftar Rumah Sakit</button>
+				</form>
+			</div>
 		</div>
-		<script>
-			function loadPengelola() {
-				console.log('load pengelola');
-				var tabel_pengelola = {{ tabel_pengelola | safe }};
-				document.getElementById("content").innerHTML = tabel_pengelola;
+		<script type="text/javascript" src="/static/js/materialize.min.js"></script>
+		<script src ="/static/js/materialize.min.jquery.js"></script>
+		<script type="text/javascript">
+			function pengelola() {
+				document.getElementById('first-tab').style.display='block';
+				document.getElementById('second-tab').style.display='none';
 			}
-
-			function loadTipeKelas() {
-				console.log('load tipe');
-				var tabel_tipe_kelas = {{ tabel_tipe_kelas  | safe }};
-				document.getElementById("content").innerHTML = tabel_tipe_kelas;
+			function tipe_kelas() {
+				document.getElementById('first-tab').style.display='none';
+				document.getElementById('second-tab').style.display='block';
 			}
+			document.getElementById('one').click();
 		</script>
-		<script type="text/javascript" src="../static/js/materialize.min.js"></script>
-		<script src ="../static/js/materialize.min.jquery.js"></script>
 	</body>
 </html>
