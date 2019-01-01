@@ -12,7 +12,7 @@ def index():
         return render_template('homepage.html', provinsi=data_provinsi)
     else:
         selected_provinsi = request.form.get('dropdown')
-        return data_rs_provinsi_pengelola(selected_provinsi)
+        return data_rs_provinsi(selected_provinsi)
 
 #
 # @app.route("/data-rs/<provinsi>/statistik-tenaga-medis")
@@ -28,10 +28,10 @@ def index():
 
 
 @app.route("/data-rs/<provinsi>/pengelola")
-def data_rs_provinsi_pengelola(provinsi):
-    # tabel = get_tabel_pengelola(provinsi)
-    tabel = None
-    return render_template('data-rs-provinsi.html', provinsi=provinsi, tabel_pengelola=tabel)
+def data_rs_provinsi(provinsi):
+    tabel_pengelola = get_tabel_pengelola(provinsi)
+    tabel_tipe_kelas = get_tabel_tipe_kelas(provinsi)
+    return render_template('data-rs-provinsi.html', provinsi=provinsi, tabel_pengelola=tabel_pengelola, tabel_tipe_kelas=tabel_tipe_kelas)
 
 
 @app.route("/data-rs/<provinsi>/<pengelola>")

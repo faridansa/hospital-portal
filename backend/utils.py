@@ -40,11 +40,11 @@ from backend.rdf import *
 
 def build_tabel(*kolom):
     data = kolom[-1]
-    tabel = '<table><tr>'
+    tabel = '<table class="highlight"><thead><tr>'
     for i in kolom:
         if i != data:
             tabel += '<th>%s</th>' % i
-    tabel += '</tr>'
+    tabel += '</tr></thead><tbody>'
     for row in data:
         # print(row)
         tabel += '<tr>'
@@ -52,8 +52,11 @@ def build_tabel(*kolom):
             # print(i + '\n')
             tabel += '<th>%s</th>' % i
         tabel += '</tr>'
-    tabel += '</tabel>'
-    print(tabel)
+    tabel += '</tbody></table>'
+    # formatted = """<table></table>"""
+    # print(tabel)
+    # print(type(formatted))
+    return tabel
 
 
 def get_seluruh_provinsi():
@@ -68,7 +71,7 @@ def get_seluruh_provinsi():
 
 def get_seluruh_rs(provinsi):
     list_rs = query_list_all_rs(provinsi)
-    print(list_rs)
+    # print(list_rs)
     return list_rs
 
 #
@@ -87,12 +90,14 @@ def get_seluruh_rs(provinsi):
 
 def get_tabel_pengelola(provinsi):
     data = query_pengelola(provinsi)
+    # print(data)
     tabel = build_tabel('Pengelola', 'Jumlah RS', 'Jumlah Tempat Tidur', data)
     return tabel
 
 
 def get_tabel_tipe_kelas(provinsi):
     data = query_tipe_kelas(provinsi)
+    # print(data)
     tabel = build_tabel('Tipe Kelas', 'Jumlah RS', 'Jumlah Tempat Tidur', data)
     return tabel
 
