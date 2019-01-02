@@ -11,25 +11,58 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	</head>
 	<body>
-		<div class="container">
+		<header>
+			<nav>
+				<div class="nav-wrapper">
+					<a href="#" class="brand-logo"><img src="/static/logo.png" alt="Logo"></a>
+					<h4 class="center-align">Portal Informasi Rumah Sakit di Indonesia</h4>
+				</div>
+			</nav>
+		</header>
+		<main>
+			<div class="container">
 				<h4 class="center-align">Rumah Sakit {{ rumah_sakit }}</h4>
 				<!-- return data here -->{{detail}}
-				<h6 class="center-align">Tipe: {{tipe_rs}} </h6>
-				<!-- <h6 class="center-align">Kode: </h6> -->
-				<h6 class="center-align">Alamat: {{alamat_rs}} </h6>
-				<h6 class="center-align">Kota/Kabupaten: {{wilayah_rs}} </h6>
-				<!-- <h6 class="center-align">Kelurahan: </h6>
-				<h6 class="center-align">Kecamatan: </h6> -->
-				<h6 class="center-align">Kode Pos: {{kode_pos_rs}} </h6>
-				<h6 class="center-align">Nomor Telepon: {{no_telp_rs}}</h6>
-				<h6 class="center-align">Nomor Fax: {{no_fax_rs}}</h6>
-				<!-- <h6 class="center-align">Telepon Humas: </h6>
-				<h6 class="center-align">Email: </h6>
-				<h6 class="center-align">Website: </h6> -->
-				<h6 class="center-align">Kelas: {{kelas_rs}} </h6>
-				<h6 class="center-align">Pengelola: {{pengelola_rs}} </h6>
-				<!-- <h6 class="center-align">Melayani Pelayanan Keluarga Berencana Gratis</h6> -->
-		</div>
+				<div class="row"></div>
+				<div class="row"></div>
+				<div class="row">
+					<div class="col l4 s6">
+						<h6 style="font-weight: bold;">Tipe</h6>
+						<h6 style="font-weight: bold;">Alamat</h6>
+						<h6 style="font-weight: bold;">Kota/Kabupaten</h6>
+						<h6 style="font-weight: bold;">Kode Pos</h6>
+						<h6 style="font-weight: bold;">Nomor Telepon<h6>
+						<h6 style="font-weight: bold;">Nomor Fax</h6>
+						<h6 style="font-weight: bold;">Kelas</h6>
+						<h6 style="font-weight: bold;">Pengelola</h6>
+					</div>
+					<div class="col l8 s6">
+						<h6>{{tipe_rs}} </h6>
+						<h6>{{alamat_rs}} </h6>
+						<h6>{{wilayah_rs}} </h6>
+						<h6>{{kode_pos_rs}} </h6>
+						<h6>{{no_telp_rs}}</h6>
+						<h6>{{no_fax_rs}}</h6>
+						<h6>{{kelas_rs}} </h6>
+						<h6>{{pengelola_rs}} </h6>
+					</div>
+			</div>
+			<div class="row"></div>
+			<div class="row"></div>
+			<div class="center-align">
+				<a class="waves-effect pink darken-2 btn" onclick="history.back(-1);">KEMBALI</a>
+			</div>
+			<div class="row"></div>
+			<div class="row"></div>
+		</main>
+		<footer class="page-footer">
+			<div class="footer-copyright">
+				<div class="container">
+				© 2019 SemantikJaya
+				<a class="grey-text text-lighten-4 right" href="https://github.com/faridansa/hospital-portal"> </> Klik disini untuk melihat kode sumber </> </a>
+				</div>
+			</div>
+		</footer>
 		<script type="text/javascript" src="/static/js/materialize.min.js"></script>
 		<script src ="/static/js/materialize.min.jquery.js"></script>
 	</body>

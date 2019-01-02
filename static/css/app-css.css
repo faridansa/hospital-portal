@@ -4,3 +4,22 @@
 table.highlight > tbody > tr:hover {
   background-color: rgba(248, 187, 208, 0.3);
 }
+.page-footer {
+	background-color: #d81b60;
+	font-size: 12px;
+}
+body {
+	display: flex;
+	flex-direction: column;
+}
+main {
+	flex: 1 0 auto;
+}
+header, nav {
+	background-color: #d81b60;
+	min-height: 8vh;
+}
+.brand-logo img {
+	padding-left: 20px;
+	height: 60px;
+}
