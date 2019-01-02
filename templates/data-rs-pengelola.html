@@ -8,14 +8,8 @@
 		<link rel="stylesheet" type="text/css" href="/static/css/app-css.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<!--Let browser know website is optimized for mobile-->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<style type="text/css">
-			table.highlight > tbody > tr:hover {
-				background-color: rgba(244, 143, 177, 0.5);
-			}
-		</style>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />	
 	</head>
-
 	<body>
 		<header>
 			<nav>
@@ -26,7 +20,7 @@
 			</nav>
 		</header>
 		<main>
-			<h3 class="center-align">Daftar RS {{ pengelola }} di Provinsi {{ provinsi }}</h3>
+			<h4 class="center-align" style="font-weight: bold;">Daftar Rumah Sakit {{ pengelola }} di Provinsi {{ provinsi }}</h4>
 			<div id="content">
 				<div class="container">
 					<!-- return table -->{{tabel_pengelola | safe}}
